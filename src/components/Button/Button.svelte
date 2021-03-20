@@ -2,7 +2,7 @@
     // your script goes here
 </script>
 
-<style>
+<style lang="scss" srce="./Button.scss" global>
     /* your styles go here */
 </style>
 
