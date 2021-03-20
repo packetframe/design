@@ -1,3 +1,5 @@
+@import './functions';
+
 // Font families
 $body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
   Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
@@ -53,10 +55,15 @@ $secondary-color-shades: (
 $packetframe-theme: () !default;
 $packetframe-theme: map-deep-merge(
   (
-    "text": (
-      "primary": rgba(#fff, 0.87),
-      "secondary": rgba(#fff, 0.6),
-      "disabled": rgba(#fff, 0.38),
+    'text': (
+      'primary': rgba(255, 255, 255, 0.87),
+      'secondary': rgba(255, 255, 255, 0.6),
+      'disabled': rgba(255, 255, 255, 0.38),
+    ),
+    'text-solid': (
+      'primary': #E0E0E0,
+      'secondary': #A0A0A0,
+      'disabled': #6C6C6C,
     ),
   ),
   $packetframe-theme
@@ -82,4 +89,4 @@ $elevation-colors: map-merge(
 
 // Borders
 $border-radius-root: 4px !default;
-$border-width-root: 1px !default;
+$border-width-root: 2px !default;

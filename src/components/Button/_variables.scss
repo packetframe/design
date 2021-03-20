@@ -1,3 +1,6 @@
 @import "../../styles/variables";
 
 $btn-border-radius: $border-radius-root !default;
+$btn-border-color: map-deep-get($packetframe-theme, 'text', 'primary') !default;
+$btn-border-color-solid: map-deep-get($packetframe-theme, 'text-solid', 'primary') !default;
+$btn-border-width: $border-width-root !default;
