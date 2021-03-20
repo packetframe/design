@@ -1,83 +1,83 @@
-
 // Font families
-$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
+$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
 $heading-font-family: $body-font-family !default;
 
 // Font weights
 $font-weights: () !default;
 $font-weights: map-merge(
   (
-    'thin': 100,
-    'light': 300,
-    'regular': 400,
-    'medium': 500,
-    'bold': 700,
-    'black': 900,
+    "thin": 100,
+    "light": 300,
+    "regular": 400,
+    "medium": 500,
+    "bold": 700,
+    "black": 900,
   ),
   $font-weights
 );
 
 // Primary color
-$primary-color: #7d00AF;
-$primary-color-light: #D18FDE;
+$primary-color: #7d00af;
+$primary-color-light: #d18fde;
 $primary-color-shades: (
-    '50':  #F4E4F6,
-    '100': #E3BCEA,
-    '200': #D18FDE,
-    '300': #BE60D0,
-    '400': #B03AC6,
-    '500': #A101BC,
-    '600': #9202B6,
-    '700': #7D00AF,
-    '800': #6B00A8,
-    '900': #45009D,
+  "50": #f4e4f6,
+  "100": #e3bcea,
+  "200": #d18fde,
+  "300": #be60d0,
+  "400": #b03ac6,
+  "500": #a101bc,
+  "600": #9202b6,
+  "700": #7d00af,
+  "800": #6b00a8,
+  "900": #45009d,
 );
 
 // Secondary color
-$secondary-color: #2600AF;
-$secondary-color-light: #B799E7;
+$secondary-color: #2600af;
+$secondary-color-light: #b799e7;
 $secondary-color-shades: (
-    '50':  #EEE6F9,
-    '100': #D4C2F0,
-    '200': #B799E7,
-    '300': #9A6FDE,
-    '400': #834ED7,
-    '500': #6C2ACF,
-    '600': #6125C8,
-    '700': #521CC0,
-    '800': #4315B9,
-    '900': #2600AF,
+  "50": #eee6f9,
+  "100": #d4c2f0,
+  "200": #b799e7,
+  "300": #9a6fde,
+  "400": #834ed7,
+  "500": #6c2acf,
+  "600": #6125c8,
+  "700": #521cc0,
+  "800": #4315b9,
+  "900": #2600af,
 );
 
 // Theme stuff
 $packetframe-theme: () !default;
 $packetframe-theme: map-deep-merge(
-    (
-        'text': (
-            'primary': rgba(#fff, 0.87),
-            'secondary': rgba(#fff, 0.60),
-            'disabled': rgba(#fff, 0.38),
-        )
+  (
+    "text": (
+      "primary": rgba(#fff, 0.87),
+      "secondary": rgba(#fff, 0.6),
+      "disabled": rgba(#fff, 0.38),
     ),
-    $packetframe-theme
+  ),
+  $packetframe-theme
 );
 
 // Elevation
 $elevation-colors: () !default;
 $elevation-colors: map-merge(
-    (
-        '0':  #121212,
-        '1':  #1e1e1e,
-        '2':  #232323,
-        '3':  #252525,
-        '4':  #272727,
-        '6':  #2c2c2c,
-        '8':  #2e2e2e,
-        '12': #333333,
-        '16': #363636,
-        '24': #383838
-    ),
-    $elevation-colors
+  (
+    "0": #121212,
+    "1": #1e1e1e,
+    "2": #232323,
+    "3": #252525,
+    "4": #272727,
+    "6": #2c2c2c,
+    "8": #2e2e2e,
+    "12": #333333,
+    "16": #363636,
+    "24": #383838,
+  ),
+  $elevation-colors
 );
 
 // Borders
