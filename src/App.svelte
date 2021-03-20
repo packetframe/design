@@ -1,5 +1,6 @@
 <script lang="ts">
     import Router from "svelte-spa-router";
+
     const routes = {};
 </script>
 
@@ -8,7 +9,7 @@
 </main>
 
 <style lang="scss">
-	$color: red;
+  	$color: red;
 
 	main {
 		width: 100%;
