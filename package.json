@@ -1,7 +1,7 @@
 {
   "name": "@packetframe/design",
   "version": "1.0.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",
