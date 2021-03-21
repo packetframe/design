@@ -1,4 +1,5 @@
 @import "./variables";
+@import "../../styles/ripple";
 
 .pf-btn {
   display: inline-flex;
@@ -12,10 +13,13 @@
   background-color: map-get($elevation-colors, "0");
   color: map-deep-get($packetframe-theme, "text", "primary");
   cursor: pointer;
-  transition: background-color $btn-transition;
+  $transitions: background-color $btn-transition, border-color $btn-transition; 
+    @include ripple($btn-border-color, $btn-background-active, $transitions);
 
   &:hover {
     background-color: $btn-border-color;
+    
+    
 
     .pf-btn__content {
       transition: color $btn-transition;
@@ -23,10 +27,10 @@
     }
   }
 
-  &:active {
-    border-color: $btn-background-active;
-    background-color: $btn-background-active;
-  }
+//   &:active {
+//     border-color: $btn-background-active;
+//     background-color: $btn-background-active;
+//   }
 
   &:focus {
     outline: none;

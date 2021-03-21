@@ -1,0 +1,18 @@
+@mixin ripple($base-color, $active-color, $transitions) {
+    background-position: right;
+    transition: $transitions, background-size 0.8s;
+
+    &:hover {
+        background: $base-color linear-gradient(
+            to right,
+            $active-color 100%,
+            $base-color
+        ) left no-repeat;
+        background-size: 0%;
+    }
+
+    &:active {
+        background-size: 100%;
+        transition: background-size 0s;
+    }
+}
