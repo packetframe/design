@@ -8,12 +8,13 @@
   };
 </script>
 
-<main>
+<main class=".pf-app">
   <Router {routes} />
 </main>
 
-<style lang="scss">
-  main {
+<style lang="scss" global>
+  @import './styles/global';
+  .pf-app {
     width: 100%;
     min-height: 100vh;
     margin: 0;

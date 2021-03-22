@@ -1,4 +1,4 @@
-@import "./variables";
+@use "../variables" as *;
 
 // From https://github.com/TheComputerM/svelte-materialify/blob/master/packages/svelte-materialify/src/styles/generic/_spacing.scss
 @for $i from 0 through 16 {

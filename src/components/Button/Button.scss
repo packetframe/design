@@ -6,8 +6,6 @@
   align-items: center;
   border-radius: $btn-border-radius;
   border: $btn-border-width solid $btn-border-color-solid;
-  margin: 0;
-  padding: 0;
   font-size: 14px; //TODO: Decide on font-size system based on sizes...
   height: 34px; //TODO: make this dependent on the size-? system
   background-color: map-get($elevation-colors, "0");

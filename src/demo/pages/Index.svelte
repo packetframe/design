@@ -11,10 +11,10 @@
   <Button icon="add">Export</Button>
   <Button rounded icon="add">Export</Button>
   <Button icon="add" filled>Export</Button>
-  <Button rounded icon="add" filled class="pl-4">Export</Button>
+  <Button rounded icon="add" filled class="ml-1">Export</Button>
 </main>
 
-<style>
+<style lang="scss">
   main {
     background-color: #121212;
   }
