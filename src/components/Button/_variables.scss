@@ -6,7 +6,7 @@ $btn-border-radius: $border-radius-root !default;
 $btn-border-color: map-deep-get(
   $packetframe-theme,
   "border",
-                "primary"
+  "primary"
 ) !default;
 $btn-border-color-solid: map-deep-get(
                 $packetframe-theme,

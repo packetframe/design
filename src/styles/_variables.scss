@@ -89,12 +89,15 @@ $elevation-colors: map-merge(
     "16": #363636,
     "24": #383838,
   ),
-  $elevation-colors
+                $elevation-colors
 );
 
 // Borders
 $border-radius-root: 4px !default;
 $border-width-root: 2px !default;
 
-//Transitions
+// Transitions
 $primary-transition: 0.3s ease !default;
+
+// Spacer
+$spacer: 1px;

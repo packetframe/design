@@ -11,7 +11,7 @@
   <Button icon="add">Export</Button>
   <Button rounded icon="add">Export</Button>
   <Button icon="add" filled>Export</Button>
-  <Button rounded icon="add" filled>Export</Button>
+  <Button rounded icon="add" filled class="pl-4">Export</Button>
 </main>
 
 <style>
