@@ -72,7 +72,11 @@
   }
 
   &.disabled {
-    border-color: map-deep-get($packetframe-theme, "text", "disabled") !important;
+    border-color: map-deep-get(
+      $packetframe-theme,
+      "text",
+      "disabled"
+    ) !important;
     color: map-deep-get($packetframe-theme, "text", "disabled") !important;
     .pf-btn__icon {
       background-color: inherit;
