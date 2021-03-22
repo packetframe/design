@@ -13,13 +13,11 @@
   background-color: map-get($elevation-colors, "0");
   color: map-deep-get($packetframe-theme, "text", "primary");
   cursor: pointer;
-  $transitions: background-color $btn-transition, border-color $btn-transition; 
+  $transitions: background-color $btn-transition, border-color $btn-transition;
   @include ripple($btn-border-color, $btn-background-active, $transitions);
 
   &:hover {
     background-color: $btn-border-color;
-    
-    
 
     .pf-btn__content {
       transition: color $btn-transition;
@@ -68,7 +66,6 @@
       .pf-btn__content {
         color: $btn-border-color-solid !important;
       }
-      
     }
     .pf-btn__icon {
       background-color: $btn-background-active;
