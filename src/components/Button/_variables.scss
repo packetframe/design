@@ -1,6 +1,8 @@
 @import "../../styles/variables";
 
 $btn-border-radius: $border-radius-root !default;
+
+// Default border settings
 $btn-border-color: map-deep-get(
   $packetframe-theme,
   "border",
@@ -12,9 +14,21 @@ $btn-border-color-solid: map-deep-get(
   "primary"
 ) !default;
 $btn-border-width: $border-width-root !default;
+
+// Default background colors
+$btn-background: map-get(
+  $elevation-colors,
+  "0"
+) !default;
 $btn-background-active: map-deep-get(
   $packetframe-theme,
   "text-solid",
   "primary"
 ) !default;
+
+// Transitions
 $btn-transition: $primary-transition !default;
+
+// Filled variant
+$btn-background-filled: $btn-border-color-solid;
+$btn-border-filled: $btn-background; // Technically this is not actually applied to all borders

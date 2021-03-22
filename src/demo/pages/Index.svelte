@@ -10,6 +10,8 @@
   <Button rounded>Export</Button>
   <Button icon="add">Export</Button>
   <Button rounded icon="add">Export</Button>
+  <Button icon="add" filled>Export</Button>
+  <Button rounded icon="add" filled>Export</Button>
 </main>
 
 <style>

@@ -14,7 +14,7 @@
   color: map-deep-get($packetframe-theme, "text", "primary");
   cursor: pointer;
   $transitions: background-color $btn-transition, border-color $btn-transition; 
-    @include ripple($btn-border-color, $btn-background-active, $transitions);
+  @include ripple($btn-border-color, $btn-background-active, $transitions);
 
   &:hover {
     background-color: $btn-border-color;
@@ -27,22 +27,8 @@
     }
   }
 
-//   &:active {
-//     border-color: $btn-background-active;
-//     background-color: $btn-background-active;
-//   }
-
   &:focus {
     outline: none;
-  }
-
-  &.rounded {
-    border-radius: 9999px;
-    .pf-btn__icon {
-      height: 34px;
-      border: $btn-border-width solid $btn-border-color-solid;
-      border-radius: 9999px;
-    }
   }
 
   .pf-btn__content {
@@ -63,5 +49,29 @@
     margin-left: -2px;
     height: 34px;
     width: 34px;
+  }
+
+  &.rounded {
+    border-radius: 9999px;
+    .pf-btn__icon {
+      height: 34px;
+      border: $btn-border-width solid $btn-border-color-solid;
+      border-radius: 9999px;
+    }
+  }
+
+  &.filled {
+    background-color: $btn-background-filled;
+    color: $btn-background;
+    &:hover {
+      background-color: $btn-background;
+      .pf-btn__content {
+        color: $btn-border-color-solid !important;
+      }
+      
+    }
+    .pf-btn__icon {
+      background-color: $btn-background-active;
+    }
   }
 }
