@@ -9,18 +9,18 @@ $btn-border-color: map-deep-get(
   "primary"
 ) !default;
 $btn-border-color-solid: map-deep-get(
-                $packetframe-theme,
-                "border",
-                "primary"
+  $packetframe-theme,
+  "border",
+  "primary"
 ) !default;
 $btn-border-width: $border-width-root !default;
 
 // Default background colors
 $btn-background: map-get($elevation-colors, "0") !default;
 $btn-background-active: map-deep-get(
-                $packetframe-theme,
-                "text-solid",
-                "primary"
+  $packetframe-theme,
+  "text-solid",
+  "primary"
 ) !default;
 
 // Transitions
