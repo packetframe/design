@@ -2,13 +2,13 @@
   background-position: right;
   transition: $transitions, background-size 0.8s;
 
-  &:hover {
+  &:not(.disabled):hover {
     background: $base-color
       linear-gradient(to left, $active-color 100%, $base-color) right no-repeat;
     background-size: 0%;
   }
 
-  &:active {
+  &:not(.disabled):active {
     background-size: 100%;
     transition: background-size 0s;
   }

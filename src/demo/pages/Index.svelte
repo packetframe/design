@@ -11,7 +11,9 @@
   <Button icon="add">Export</Button>
   <Button rounded icon="add">Export</Button>
   <Button icon="add" filled>Export</Button>
-  <Button rounded icon="add" filled class="ml-1">Export</Button>
+  <Button rounded icon="add" filled class="ml-1" disabled>Export</Button>
+  <Button icon="add" disabled>Export</Button>
+  <Button rounded icon="add" disabled>Export</Button>
 </main>
 
 <style lang="scss">

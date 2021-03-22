@@ -14,9 +14,7 @@
   $transitions: background-color $btn-transition, border-color $btn-transition;
   @include ripple($btn-border-color, $btn-background-active, $transitions);
 
-  &:hover {
-    background-color: $btn-border-color;
-
+  &:not(.disabled):hover {
     .pf-btn__content {
       transition: color $btn-transition;
       color: map-get($elevation-colors, "0");
@@ -35,7 +33,7 @@
   }
 
   .pf-btn__icon {
-    background-color: map-get($elevation-colors, "0");
+    background-color: $btn-background;
     border: $btn-border-width solid $btn-border-color;
     border-top-left-radius: $btn-border-radius;
     border-bottom-left-radius: $btn-border-radius;
@@ -51,12 +49,11 @@
     border-radius: 9999px;
     .pf-btn__icon {
       height: 34px;
-      border: $btn-border-width solid $btn-border-color-solid;
       border-radius: 9999px;
     }
   }
 
-  &.filled {
+  &:not(.disabled).filled {
     background-color: $btn-background-filled;
     color: $btn-background;
     @include ripple(
@@ -66,11 +63,20 @@
     );
     &:hover {
       .pf-btn__content {
-        color: $btn-border-color-solid !important;
+        color: $btn-border-color-solid;
       }
     }
     .pf-btn__icon {
       color: $btn-border-color-solid;
+    }
+  }
+
+  &.disabled {
+    border-color: map-deep-get($packetframe-theme, "text", "disabled") !important;
+    color: map-deep-get($packetframe-theme, "text", "disabled") !important;
+    .pf-btn__icon {
+      background-color: inherit;
+      border: inherit;
     }
   }
 }
