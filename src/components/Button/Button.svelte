@@ -8,6 +8,7 @@
     export let rounded: boolean = false;
     export let disabled: boolean = null;
     export let filled: boolean = false;
+    export let flat: boolean = false;
     export let icon: string = null;
     export let href: string = null;
     export let ref: HTMLElement = null;
@@ -25,6 +26,7 @@
         class:disabled
         class:rounded
         class:filled
+        class:flat
         {style}
         {...$$restProps}
     >
@@ -43,6 +45,7 @@
         class:disabled
         class:rounded
         class:filled
+        class:flat
         {type}
         {style}
         {disabled}

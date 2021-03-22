@@ -30,3 +30,8 @@ $btn-transition: $primary-transition !default;
 $btn-background-filled: $btn-border-color-solid;
 $btn-border-filled: $btn-background; // Technically this is not actually applied to all borders
 $btn-background-filled-active: map-get($elevation-colors, "4") !default;
+
+// Flat variant
+$btn-background-flat: map-get($elevation-colors, "8");
+$btn-icon-background-flat: map-get($elevation-colors, "3");
+$btn-color-flat: map-deep-get($packetframe-theme, "text", "primary") !default;

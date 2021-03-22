@@ -12,14 +12,6 @@
   color: map-deep-get($packetframe-theme, "text", "primary");
   cursor: pointer;
   $transitions: background-color $btn-transition, border-color $btn-transition;
-  @include ripple($btn-border-color, $btn-background-active, $transitions);
-
-  &:not(.disabled):hover {
-    .pf-btn__content {
-      transition: color $btn-transition;
-      color: map-get($elevation-colors, "0");
-    }
-  }
 
   &:focus {
     outline: none;
@@ -53,21 +45,33 @@
     }
   }
 
-  &:not(.disabled).filled {
-    background-color: $btn-background-filled;
-    color: $btn-background;
-    @include ripple(
-      $btn-background,
-      $btn-background-filled-active,
-      $transitions
-    );
+  &:not(.disabled):not(.flat) {
+    // These styles hould never apply when we are disabled.
+    @include ripple($btn-border-color, $btn-background-active, $transitions);
+
     &:hover {
       .pf-btn__content {
-        color: $btn-border-color-solid;
+        transition: color $btn-transition;
+        color: map-get($elevation-colors, "0");
       }
     }
-    .pf-btn__icon {
-      color: $btn-border-color-solid;
+
+    &.filled {
+      background-color: $btn-background-filled;
+      color: $btn-background;
+      @include ripple(
+        $btn-background,
+        $btn-background-filled-active,
+        $transitions
+      );
+      &:hover {
+        .pf-btn__content {
+          color: $btn-border-color-solid;
+        }
+      }
+      .pf-btn__icon {
+        color: $btn-border-color-solid;
+      }
     }
   }
 
@@ -81,6 +85,15 @@
     .pf-btn__icon {
       background-color: inherit;
       border: inherit;
+    }
+  }
+
+  &.flat {
+    background-color: $btn-background-flat;
+    border-color: $btn-background-flat;
+    .pf-btn__icon {
+      background-color: $btn-icon-background-flat;
+      border-color: $btn-icon-background-flat;
     }
   }
 }
