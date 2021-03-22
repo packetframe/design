@@ -59,14 +59,18 @@
   &.filled {
     background-color: $btn-background-filled;
     color: $btn-background;
+    @include ripple(
+      $btn-background,
+      $btn-background-filled-active,
+      $transitions
+    );
     &:hover {
-      background-color: $btn-background;
       .pf-btn__content {
         color: $btn-border-color-solid !important;
       }
     }
     .pf-btn__icon {
-      background-color: $btn-background-active;
+      color: $btn-border-color-solid;
     }
   }
 }

@@ -29,3 +29,4 @@ $btn-transition: $primary-transition !default;
 // Filled variant
 $btn-background-filled: $btn-border-color-solid;
 $btn-border-filled: $btn-background; // Technically this is not actually applied to all borders
+$btn-background-filled-active: map-get($elevation-colors, "4") !default;
