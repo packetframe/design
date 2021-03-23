@@ -37,17 +37,17 @@
     width: 34px;
   }
 
-  &.rounded {
-    border-radius: 9999px;
-    .pf-btn__icon {
-      height: 34px;
-      border-radius: 9999px;
-    }
-  }
+  // &.rounded {
+  //   border-radius: 9999px;
+  //   .pf-btn__icon {
+  //     height: 34px;
+  //     border-radius: 9999px;
+  //   }
+  // }
 
   &:not(.disabled):not(.flat) {
     // These styles hould never apply when we are disabled.
-    @include ripple($btn-border-color, $btn-background-active, $transitions);
+    @include ripple($btn-background-filled, $btn-background-active, $transitions);
 
     &:hover {
       .pf-btn__content {
@@ -73,6 +73,16 @@
         color: $btn-border-color-solid;
       }
     }
+
+    &.secondary {
+      color: $btn-border-secondary;
+      border-color: $btn-border-secondary;
+      .pf-btn__icon {
+        color: $btn-border-secondary;
+        border-color: $btn-border-secondary;
+      }
+    }
+
   }
 
   &.disabled {

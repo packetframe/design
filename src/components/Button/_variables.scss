@@ -35,3 +35,10 @@ $btn-background-filled-active: map-get($elevation-colors, "4") !default;
 $btn-background-flat: map-get($elevation-colors, "8");
 $btn-icon-background-flat: map-get($elevation-colors, "3");
 $btn-color-flat: map-deep-get($packetframe-theme, "text", "primary") !default;
+
+// Secondary variant
+$btn-border-secondary: map-deep-get(
+  $packetframe-theme,
+  "border",
+  "secondary"
+) !default;

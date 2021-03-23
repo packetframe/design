@@ -5,13 +5,14 @@
     export let size: string = 'default';
     export let style: string = null;
     export let type: string = null;
-    export let rounded: boolean = false;
+    // export let rounded: boolean = false;
     export let disabled: boolean = null;
     export let filled: boolean = false;
     export let flat: boolean = false;
     export let icon: string = null;
     export let href: string = null;
     export let ref: HTMLElement = null;
+    export let variant: string = null;
 </script>
 
 <style lang="scss" src="./Button.scss" global>
@@ -24,9 +25,9 @@
         class="pf-btn size-{size} {userClasses}"
         class:icon
         class:disabled
-        class:rounded
         class:filled
         class:flat
+        class:secondary={variant == "secondary"}
         {style}
         {...$$restProps}
     >
@@ -43,9 +44,9 @@
         class="pf-btn size-{size} {userClasses}"
         class:icon
         class:disabled
-        class:rounded
         class:filled
         class:flat
+        class:secondary={variant == "secondary"}
         {type}
         {style}
         {disabled}
