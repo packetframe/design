@@ -25,9 +25,9 @@
         class="pf-btn size-{size} {userClasses}"
         class:icon
         class:disabled
-        class:filled
-        class:flat
-        class:secondary={variant == "secondary"}
+        class:filled={variant === "filled"}
+        class:flat={variant === "flat"}
+        class:secondary={variant === "secondary"}
         {style}
         {...$$restProps}
     >
@@ -44,9 +44,9 @@
         class="pf-btn size-{size} {userClasses}"
         class:icon
         class:disabled
-        class:filled
-        class:flat
-        class:secondary={variant == "secondary"}
+        class:filled={variant === "filled"}
+        class:flat={variant === "flat"}
+        class:secondary={variant === "secondary"}
         {type}
         {style}
         {disabled}

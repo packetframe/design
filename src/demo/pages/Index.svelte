@@ -9,10 +9,10 @@
   <div>
     <Button class="ma-2">Export</Button>
     <Button icon="add" class="ma-2">Export</Button>
-    <Button icon="add" filled class="ma-2">Export</Button>
+    <Button icon="add" variant="filled" class="ma-2">Export</Button>
     <Button icon="add" disabled class="ma-2">Export</Button>
     <Button icon="add" variant="secondary" class="ma-2">Export</Button>
-    <Button flat icon="add" class="ma-2">Export</Button>
+    <Button variant="flat" icon="add" class="ma-2">Export</Button>
   </div>
 </main>
 
@@ -25,5 +25,6 @@
   }
   div {
     display: flex;
+    flex-wrap: wrap;
   }
 </style>

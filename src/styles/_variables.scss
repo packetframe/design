@@ -92,6 +92,23 @@ $elevation-colors: map-merge(
   $elevation-colors
 );
 
+// Accent
+$accent-colors: () !default;
+$accent-colors: map-merge(
+  (
+    "0": #121212,
+    "1": #333,
+    "2": #444,
+    "3": #666,
+    "4": #888,
+    "5": #999,
+    "6": #eaeaea,
+    "7": #fafafa,
+  ),
+  $accemt-colors
+);
+
+
 // Borders
 $border-radius-root: 4px !default;
 $border-width-root: 1px !default;
