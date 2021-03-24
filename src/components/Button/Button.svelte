@@ -7,12 +7,10 @@
     export let type: string = null;
     // export let rounded: boolean = false;
     export let disabled: boolean = null;
-    export let filled: boolean = false;
-    export let flat: boolean = false;
     export let icon: string = null;
     export let href: string = null;
     export let ref: HTMLElement = null;
-    export let variant: string = null;
+    export let variant: null | "filled" | "flat" | "secondary" = null;
 </script>
 
 <style lang="scss" src="./Button.scss" global>
