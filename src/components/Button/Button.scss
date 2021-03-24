@@ -49,7 +49,11 @@
 
   &:not(.disabled):not(.flat) {
     // These styles hould never apply when we are disabled.
-    @include ripple($btn-background-filled, $btn-background-active, $transitions);
+    @include ripple(
+      $btn-background-filled,
+      $btn-background-active,
+      $transitions
+    );
 
     &:hover:not(.secondary) {
       .pf-btn__content {
@@ -86,7 +90,11 @@
       &:hover {
         background-color: $btn-background;
         .pf-btn__content {
-          color: map-deep-get($packetframe-theme, "text", "primary"); //TODO: make this a variable
+          color: map-deep-get(
+            $packetframe-theme,
+            "text",
+            "primary"
+          ); //TODO: make this a variable
         }
         .pf-btn__icon {
           color: map-deep-get($packetframe-theme, "text", "primary");
@@ -95,7 +103,6 @@
         border-color: $btn-border-color-solid;
       }
     }
-
   }
 
   &.disabled {
