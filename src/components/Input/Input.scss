@@ -1,0 +1,30 @@
+@import './variables';
+
+.pf-input {
+  display: flex;
+  flex-direction: column;
+  color: $input-color;
+  font-size: $label-font-size;
+  margin: $spacer;
+
+  &.focus {
+    color: $input-color-focused;
+  }
+
+  .pf-input__main {
+    border: $input-border-width solid $input-border-color;
+    border-radius: $input-border-radius;
+    padding: $input-padding;
+    font-size: $input-font-size;
+    color: $input-color;
+    height: $spacer * 8.5; // TODO: make this based on size system
+    margin-top: $spacer * 0.5;
+  }
+
+  .pf-input__main:focus {
+    border-color: $input-border-color-focused;
+    color: $input-border-color-focused;
+    outline: none;
+  }
+
+}

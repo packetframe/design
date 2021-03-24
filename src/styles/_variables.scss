@@ -70,6 +70,13 @@ $packetframe-theme: map-deep-merge(
       "secondary": #a0a0a0,
       "disabled": #6c6c6c,
     ),
+    "font-size": (
+      "x-small": 8px,
+      "small": 12px,
+      "default": 14px,
+      "large": 18px,
+      "x-large": 24px,
+    )
   ),
   $packetframe-theme
 );

@@ -1,5 +1,6 @@
 <script>
   import Button from "../../components/Button"
+  import Input from "../../components/Input"
 </script>
 
 <main>
@@ -14,6 +15,7 @@
     <Button icon="add" variant="secondary" class="ma-2">Export</Button>
     <Button variant="flat" icon="add" class="ma-2">Export</Button>
   </div>
+  <Input label="Record" placeholder="Write something here" />
 </main>
 
 <style lang="scss">
