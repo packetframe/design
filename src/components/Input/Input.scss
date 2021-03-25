@@ -7,7 +7,7 @@
   font-size: $label-font-size;
   margin: $spacer;
 
-  &.focus {
+  &.focus:not(.error) {
     color: $input-color-focused;
     .pf-input__icon {
       color: $input-color-focused;
@@ -40,7 +40,7 @@
     color: $input-color-error;
     .pf-input__main,
     .pf-input__icon {
-      border-color: $input-border-color-error;
+      border-color: $input-border-color-error !important;
     }
   }
 

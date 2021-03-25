@@ -9,11 +9,11 @@
   <br>
   <div>
     <Button class="ma-2">Export</Button>
-    <Button icon="add" class="ma-2">Export</Button>
-    <Button icon="add" variant="filled" class="ma-2">Export</Button>
+    <Button icon="add" class="ma-2" danger>Export</Button>
+    <Button icon="add" variant="filled" class="ma-2" danger>Export</Button>
     <Button icon="add" disabled class="ma-2">Export</Button>
     <Button icon="add" variant="secondary" class="ma-2">Export</Button>
-    <Button variant="flat" icon="add" class="ma-2">Export</Button>
+    <Button variant="flat" icon="add" class="ma-2" danger>Export</Button>
   </div>
   <Input label="Record" placeholder="Write something here" />
   <Input label="Record" placeholder="Write something here" icon="add" error="This is a required field" />

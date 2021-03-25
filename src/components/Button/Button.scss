@@ -47,7 +47,7 @@
   //   }
   // }
 
-  &:not(.disabled):not(.flat) {
+  &:not(.disabled):not(.flat):not(.danger) {
     // These styles hould never apply when we are disabled.
     @include ripple(
       $btn-background-filled,
@@ -126,4 +126,61 @@
       border-color: $btn-icon-background-flat;
     }
   }
+
+  &.danger {
+    &.default {
+      @include ripple(
+        $btn-background-filled-danger,
+        $btn-background-flat-danger,
+        $transitions
+      );
+
+      border-color: $btn-border-danger;
+      color: $btn-color-danger;
+      .pf-btn__icon {
+        border-color: $btn-border-danger;
+      }
+
+      &:hover {
+        .pf-btn__content {
+          color: $btn-color-filled-danger !important;
+        }
+      }
+
+    }
+
+    &.flat {
+      border-color: $btn-background-flat-danger;
+      background-color: $btn-background-flat-danger;
+      .pf-btn__icon {
+        border-color: $btn-icon-background-flat-danger;
+        background-color: $btn-icon-background-flat-danger;
+      }
+    }
+
+    &.filled {
+      @include ripple(
+        $btn-background,
+        $btn-icon-background-flat-danger,
+        $transitions
+      );
+      
+      border-color: $btn-border-danger;
+      background-color: $btn-background-filled-danger;
+      .pf-btn__content {
+        color: $btn-color-filled-danger;
+      }
+      .pf-btn__icon {
+        border-color: $btn-border-danger;
+        color: $btn-border-danger !important;
+      }
+
+      &:hover {
+        .pf-btn__content {
+          color: $btn-color-danger !important;
+        }
+      }
+    }
+  }
+
 }

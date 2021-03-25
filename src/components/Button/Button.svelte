@@ -10,7 +10,7 @@
     export let icon: string = null;
     export let href: string = null;
     export let ref: HTMLElement = null;
-    export let danger: boolean = false;
+    export let danger: boolean = null;
     export let variant: null | "filled" | "flat" | "secondary" = null;
 </script>
 
@@ -24,6 +24,8 @@
         class="pf-btn size-{size} {userClasses}"
         class:icon
         class:disabled
+        class:danger
+        class:default={variant === null}
         class:filled={variant === "filled"}
         class:flat={variant === "flat"}
         class:secondary={variant === "secondary"}
@@ -43,6 +45,8 @@
         class="pf-btn size-{size} {userClasses}"
         class:icon
         class:disabled
+        class:danger
+        class:default={variant === null}
         class:filled={variant === "filled"}
         class:flat={variant === "flat"}
         class:secondary={variant === "secondary"}
