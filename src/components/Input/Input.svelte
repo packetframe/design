@@ -43,7 +43,7 @@
       on:input
       on:change
       bind:value
-  />
+    />
   </div>
   {#if error || fixErrorHeight}
   <span class="pf-input__error">{error ? error : ""}</span>
