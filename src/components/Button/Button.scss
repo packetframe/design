@@ -81,6 +81,11 @@
     }
 
     &.secondary {
+      @include ripple(
+        $btn-background,
+        $btn-background-filled-active,
+        $transitions
+      );
       color: $btn-border-secondary;
       border-color: $btn-border-secondary;
       .pf-btn__icon {
@@ -146,7 +151,6 @@
           color: $btn-color-filled-danger !important;
         }
       }
-
     }
 
     &.flat {
@@ -164,7 +168,7 @@
         $btn-icon-background-flat-danger,
         $transitions
       );
-      
+
       border-color: $btn-border-danger;
       background-color: $btn-background-filled-danger;
       .pf-btn__content {
@@ -182,5 +186,4 @@
       }
     }
   }
-
 }
