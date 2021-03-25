@@ -27,4 +27,18 @@
     outline: none;
   }
 
+  &.error {
+    color: $input-color-error;
+    .pf-input__main {
+      border-color: $input-border-color-error;
+    }
+  }
+
+  .pf-input__error {
+    color: $input-color-error;
+    font-size: $input-font-size-error;
+    line-height: 1.5;
+    height: 18px;
+  }
+
 }

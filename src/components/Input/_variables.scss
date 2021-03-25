@@ -18,3 +18,8 @@ $input-color-focused: $input-border-color-focused !default;
 // Disabled
 $input-border-color-disabled: map-deep-get($packetframe-theme, 'border', 'disabled') !default;
 $input-color-disabled: $input-border-color-disabled !default;
+
+// Error
+$input-border-color-error: map-deep-get($packetframe-theme, 'states', 'error') !default;
+$input-color-error: $input-border-color-error !default;
+$input-font-size-error: map-deep-get($packetframe-theme, 'font-size', 'small') !default;

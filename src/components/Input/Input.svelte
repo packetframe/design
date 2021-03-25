@@ -4,10 +4,11 @@
   export let placeholder: string = "";
   export let label: string = "";
   export let error: string = null;
-  export let disabled: boolean;
+  export let disabled: boolean = false;
   export let size: string = "default";
   export let icon: string = null;
   export let value: string = "";
+  export let fixErrorHeight: boolean = true;
   
   let focus: boolean;
 
@@ -25,7 +26,7 @@
 <style lang="scss" src="./Input.scss" global>
 </style>
 
-<label class="pf-input" class:focus>
+<label class="pf-input" class:focus class:error={$$slots.error || error}>
   {label}
   {#if icon}
   <span class="material-icons pf-input__icon">{icon}</span>
@@ -43,8 +44,8 @@
     on:change
     bind:value
   />
-  {#if error}
-  <span class="pf-input__error">{error}</span>
+  {#if error || fixErrorHeight}
+  <span class="pf-input__error">{error ? error : ""}</span>
   {/if}
   <slot name="error"></slot>
 </label>

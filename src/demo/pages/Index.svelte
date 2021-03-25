@@ -16,6 +16,7 @@
     <Button variant="flat" icon="add" class="ma-2">Export</Button>
   </div>
   <Input label="Record" placeholder="Write something here" />
+  <Input label="Record" placeholder="Write something here" error="This is a required field" />
 </main>
 
 <style lang="scss">

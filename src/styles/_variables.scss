@@ -76,6 +76,10 @@ $packetframe-theme: map-deep-merge(
       "default": 14px,
       "large": 18px,
       "x-large": 24px,
+    ),
+    "states": (
+      "success": green,
+      "error": #ED2F4F,
     )
   ),
   $packetframe-theme
