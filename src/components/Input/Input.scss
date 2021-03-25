@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 
 .pf-input {
   display: flex;
@@ -38,7 +38,8 @@
 
   &.error {
     color: $input-color-error;
-    .pf-input__main, .pf-input__icon {
+    .pf-input__main,
+    .pf-input__icon {
       border-color: $input-border-color-error;
     }
   }
@@ -66,5 +67,4 @@
     border-top-left-radius: $input-border-radius;
     border-bottom-left-radius: $input-border-radius;
   }
-
 }

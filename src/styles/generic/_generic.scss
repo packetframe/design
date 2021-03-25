@@ -28,7 +28,7 @@
   }
 }
 
-@each $name, $color in map-deep-get($packetframe-theme, 'states') {
+@each $name, $color in map-deep-get($packetframe-theme, "states") {
   @each $type in ("border-color", "color") {
     .#{$type}-#{$name} {
       #{$type}: $color !important;

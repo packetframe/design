@@ -1,8 +1,12 @@
-@import '../../styles/variables';
+@import "../../styles/variables";
 
 // Defaults
-$input-font-size: map-deep-get($packetframe-theme, 'font-size', 'default') !default;
-$input-border-color: map-get($accent-colors, '4') !default;
+$input-font-size: map-deep-get(
+  $packetframe-theme,
+  "font-size",
+  "default"
+) !default;
+$input-border-color: map-get($accent-colors, "4") !default;
 $input-color: $input-border-color !default;
 $input-padding: $spacer * 1 $spacer * 2;
 $input-border-radius: $border-radius-root !default;
@@ -12,14 +16,26 @@ $input-border-width: $border-width-root !default;
 $label-font-size: $input-font-size !default;
 
 // Focused
-$input-border-color-focused: map-get($accent-colors, '7') !default;
+$input-border-color-focused: map-get($accent-colors, "7") !default;
 $input-color-focused: $input-border-color-focused !default;
 
 // Disabled
-$input-border-color-disabled: map-deep-get($packetframe-theme, 'border', 'disabled') !default;
+$input-border-color-disabled: map-deep-get(
+  $packetframe-theme,
+  "border",
+  "disabled"
+) !default;
 $input-color-disabled: $input-border-color-disabled !default;
 
 // Error
-$input-border-color-error: map-deep-get($packetframe-theme, 'states', 'error') !default;
+$input-border-color-error: map-deep-get(
+  $packetframe-theme,
+  "states",
+  "error"
+) !default;
 $input-color-error: $input-border-color-error !default;
-$input-font-size-error: map-deep-get($packetframe-theme, 'font-size', 'small') !default;
+$input-font-size-error: map-deep-get(
+  $packetframe-theme,
+  "font-size",
+  "small"
+) !default;

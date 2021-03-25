@@ -37,4 +37,4 @@ $btn-icon-background-flat: map-get($elevation-colors, "3");
 $btn-color-flat: map-deep-get($packetframe-theme, "text", "primary") !default;
 
 // Secondary variant
-$btn-border-secondary: map-get($accent-colors, "4")
+$btn-border-secondary: map-get($accent-colors, "4");
