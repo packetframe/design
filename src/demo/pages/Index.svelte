@@ -8,7 +8,7 @@
   <a href="https://github.com/packetframe/design">https://github.com/packetframe/design</a>
   <br>
   <div>
-    <Button class="ma-2">Export</Button>
+    <Button class="ma-2" href={"/#/test"}>Export</Button>
     <Button icon="add" class="ma-2" danger>Export</Button>
     <Button icon="lock" variant="filled" class="ma-2" danger>Export</Button>
     <Button icon="add" disabled class="ma-2">Export</Button>
