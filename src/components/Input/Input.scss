@@ -9,6 +9,10 @@
 
   &.focus {
     color: $input-color-focused;
+    .pf-input__icon {
+      color: $input-color-focused;
+      border-color: $input-border-color-focused;
+    }
   }
 
   .pf-input__main {
@@ -18,7 +22,12 @@
     font-size: $input-font-size;
     color: $input-color;
     height: $spacer * 8.5; // TODO: make this based on size system
-    margin-top: $spacer * 0.5;
+    flex-grow: 1;
+    &.icon {
+      border-top-left-radius: 0px;
+      border-bottom-left-radius: 0px;
+      margin-left: -1px;
+    }
   }
 
   .pf-input__main:focus {
@@ -38,7 +47,24 @@
     color: $input-color-error;
     font-size: $input-font-size-error;
     line-height: 1.5;
-    height: 18px;
+    height: $input-font-size-error * 1.5;
+  }
+
+  .pf-input__wrapper {
+    margin-top: $spacer * 0.5;
+    display: flex;
+    width: auto;
+  }
+
+  .pf-input__icon {
+    height: $spacer * 8.5;
+    width: $spacer * 8.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: $input-border-width solid $input-border-color;
+    border-top-left-radius: $input-border-radius;
+    border-bottom-left-radius: $input-border-radius;
   }
 
 }

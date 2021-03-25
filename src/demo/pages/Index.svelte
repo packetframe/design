@@ -17,6 +17,7 @@
   </div>
   <Input label="Record" placeholder="Write something here" />
   <Input label="Record" placeholder="Write something here" error="This is a required field" />
+  <Input label="Record" placeholder="Write something here" icon="add" />
 </main>
 
 <style lang="scss">
