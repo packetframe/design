@@ -18,6 +18,8 @@
   <Input label="Record" placeholder="Write something here" />
   <Input label="Record" placeholder="Write something here" icon="add" error="This is a required field" />
   <Input label="Record" placeholder="Write something here" icon="add" />
+  <Input label="Username" placeholder="Enter username..." icon="person" />
+  <Input label="Password" placeholder="Enter password..." icon="lock" type="password" />
 </main>
 
 <style lang="scss">

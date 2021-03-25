@@ -9,7 +9,7 @@
   export let icon: string = null;
   export let value: string = "";
   export let fixErrorHeight: boolean = true;
-  
+
   let focus: boolean;
 
   const handleFocus = () => {
@@ -19,8 +19,6 @@
   const handleBlur = () => {
     focus = false;
   }
-
-
 </script>
 
 <style lang="scss" src="./Input.scss" global>
@@ -33,7 +31,7 @@
     {#if icon}
     <span class="material-icons pf-input__icon">{icon}</span>
     {/if}
-    <input 
+    <input
       class:disabled
       class:icon
       class="pf-input__main size-{size} {userClasses}"
@@ -52,4 +50,3 @@
   {/if}
   <slot name="error"></slot>
 </label>
-
