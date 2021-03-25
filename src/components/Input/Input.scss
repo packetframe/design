@@ -38,7 +38,7 @@
 
   &.error {
     color: $input-color-error;
-    .pf-input__main {
+    .pf-input__main, .pf-input__icon {
       border-color: $input-border-color-error;
     }
   }

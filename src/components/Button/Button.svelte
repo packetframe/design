@@ -10,6 +10,7 @@
     export let icon: string = null;
     export let href: string = null;
     export let ref: HTMLElement = null;
+    export let danger: boolean = false;
     export let variant: null | "filled" | "flat" | "secondary" = null;
 </script>
 
