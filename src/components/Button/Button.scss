@@ -37,6 +37,7 @@
     height: 34px;
     width: 34px;
     transition: color $btn-transition, border-color $btn-transition;
+    font-size: map-deep-get($packetframe-theme, 'font-size', 'x-large');
   }
 
   // &.rounded {
