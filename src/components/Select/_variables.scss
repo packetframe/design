@@ -10,3 +10,14 @@ $select-background: map-get($elevation-colors, "0") !default;
 // Focused
 $select-border-color-focused: map-get($accent-colors, "7") !default;
 $select-color-focused: $select-border-color-focused !default;
+
+// Items
+$select-item-background: $select-background !default;
+$select-item-color: $select-color-focused !default;
+
+// Items hover
+$select-item-hover-background: map-get($elevation-colors, "4") !default;
+$select-item-hover-color: $select-color !default;
+
+// List
+$select-list-border-color: map-get($accent-colors, "5") !default;

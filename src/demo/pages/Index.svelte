@@ -1,15 +1,30 @@
 <script>
-  import Button from "../../components/Button"
-  import Input from "../../components/Input"
-  import Select from "../../components/Select"
+  import Button from "../../components/Button";
+  import Input from "../../components/Input";
+  import Select from "../../components/Select";
 
-  const items = ['One', 'Two', 'Three'];
+  const items = [
+    { value: "chocolate", label: "🍫 Chocolate", group: "Sweet" },
+    { value: "pizza", label: "🍕 Pizza", group: "Savory" },
+    { value: "cake", label: "🎂 Cake", group: "Sweet" },
+    { value: "cookies", label: "🍪 Cookies", group: "Savory" },
+    { value: "ice-cream", label: "🍦 Ice Cream", group: "Sweet" },
+  ];
+
+  let favouriteFood = undefined;
+
+  function handleSelect(event) {
+    favouriteFood = event.detail;
+  }
+
 </script>
 
 <main>
   <h1>Packetframe Design Demo</h1>
-  <a href="https://github.com/packetframe/design">https://github.com/packetframe/design</a>
-  <br>
+  <a href="https://github.com/packetframe/design"
+    >https://github.com/packetframe/design</a
+  >
+  <br />
   <div>
     <Button class="ma-2">Export</Button>
     <Button icon="add" class="ma-2" danger>Export</Button>
@@ -19,12 +34,17 @@
     <Button variant="flat" icon="lock" class="ma-2" danger>Export</Button>
   </div>
   <Input label="Record" placeholder="Write something here" />
-  <Input label="Record" placeholder="Write something here" icon="add" error="This is a required field" />
+  <Input
+    label="Record"
+    placeholder="Write something here"
+    icon="add"
+    error="This is a required field"
+  />
   <Input label="Record" placeholder="Write something here" icon="add" />
   <!-- <Input label="Username" placeholder="Enter username..." />
   <Input label="Password" placeholder="Enter password..." type="password" /> -->
 
-  <Select {items}></Select>
+  <Select {items} on:select={handleSelect} />
 </main>
 
 <style lang="scss">
@@ -38,4 +58,5 @@
     display: flex;
     flex-wrap: wrap;
   }
+
 </style>

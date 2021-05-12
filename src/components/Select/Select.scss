@@ -1,9 +1,42 @@
 @import "./variables";
 
 .pf-select {
-  --background: $select-background;
-  --border: $select-border-width solid $select-border-color;
-  --borderRadius: $select-border-radius;
-  --borderFocusColor: $select-border-color-focused;
+  margin: $spacer;
 
+  --border: #{$select-border-width} solid #{$select-border-color};
+  --borderRadius: #{$select-border-radius};
+  --borderFocusColor: #{$select-border-color-focused};
+
+  --background: #{$select-background};
+  --placeholderColor: #{$select-color};
+  --inputColor: #{$select-color-focused};
+
+  --itemColor: #{$select-item-color};
+  --itemFirstBorderRadius: #{$select-border-radius};
+  --itemHoverBG: #{$select-item-hover-background};
+  --itemIsActiveColor: #{$select-item-color};
+  --itemIsActiveBG: #{$select-item-hover-background};
+  --itemActiveBackground: #{$select-item-hover-background};
+
+  --listBackground: #{$select-background};
+  --listBorderRadius: #{$select-border-radius};
+
+  --clearSelectColor: #{$select-color};
+  --clearSelectFocusColor: #{$select-color-focused};
+
+  .listContainer {
+    border: #{$select-border-width} solid #{$select-list-border-color};
+  }
+
+  .selectedItem {
+    color: #{$select-color};
+  }
+
+  .selectContainer {
+    &.focused {
+      .selectedItem {
+        color: #{$select-color-focused};
+      }
+    }
+  }
 }
