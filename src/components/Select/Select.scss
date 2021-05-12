@@ -1,0 +1,9 @@
+@import "./variables";
+
+.pf-select {
+  --background: $select-background;
+  --border: $select-border-width solid $select-border-color;
+  --borderRadius: $select-border-radius;
+  --borderFocusColor: $select-border-color-focused;
+
+}

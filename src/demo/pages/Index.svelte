@@ -1,6 +1,9 @@
 <script>
   import Button from "../../components/Button"
   import Input from "../../components/Input"
+  import Select from "../../components/Select"
+
+  const items = ['One', 'Two', 'Three'];
 </script>
 
 <main>
@@ -8,7 +11,7 @@
   <a href="https://github.com/packetframe/design">https://github.com/packetframe/design</a>
   <br>
   <div>
-    <Button class="ma-2" href={"/#/test"}>Export</Button>
+    <Button class="ma-2">Export</Button>
     <Button icon="add" class="ma-2" danger>Export</Button>
     <Button icon="lock" variant="filled" class="ma-2" danger>Export</Button>
     <Button icon="add" disabled class="ma-2">Export</Button>
@@ -18,8 +21,10 @@
   <Input label="Record" placeholder="Write something here" />
   <Input label="Record" placeholder="Write something here" icon="add" error="This is a required field" />
   <Input label="Record" placeholder="Write something here" icon="add" />
-  <Input label="Username" placeholder="Enter username..." icon="person" />
-  <Input label="Password" placeholder="Enter password..." icon="lock" type="password" />
+  <!-- <Input label="Username" placeholder="Enter username..." />
+  <Input label="Password" placeholder="Enter password..." type="password" /> -->
+
+  <Select {items}></Select>
 </main>
 
 <style lang="scss">

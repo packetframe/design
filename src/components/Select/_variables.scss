@@ -1,0 +1,12 @@
+@import "../../styles/variables";
+
+$select-border-radius: $border-radius-root !default;
+$select-border-color: map-get($accent-colors, "4") !default;
+$select-border-width: $border-width-root !default;
+
+$select-color: $select-border-color !default;
+$select-background: map-get($elevation-colors, "0") !default;
+
+// Focused
+$select-border-color-focused: map-get($accent-colors, "7") !default;
+$select-color-focused: $select-border-color-focused !default;
