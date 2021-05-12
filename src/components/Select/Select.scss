@@ -24,6 +24,8 @@
   --clearSelectColor: #{$select-color};
   --clearSelectFocusColor: #{$select-color-focused};
 
+  --indicatorColor: #{$select-color};
+
   .listContainer {
     border: #{$select-border-width} solid #{$select-list-border-color};
   }
@@ -34,6 +36,8 @@
 
   .selectContainer {
     &.focused {
+      --indicatorColor: #{$select-color-focused};
+
       .selectedItem {
         color: #{$select-color-focused};
       }
