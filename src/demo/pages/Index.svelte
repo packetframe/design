@@ -4,11 +4,11 @@
   import Select from "../../components/Select";
 
   const items = [
-    { value: "chocolate", label: "🍫 Chocolate", group: "Sweet" },
-    { value: "pizza", label: "🍕 Pizza", group: "Savory" },
-    { value: "cake", label: "🎂 Cake", group: "Sweet" },
-    { value: "cookies", label: "🍪 Cookies", group: "Savory" },
-    { value: "ice-cream", label: "🍦 Ice Cream", group: "Sweet" },
+    { value: "chocolate", label: "Chocolate", group: "Sweet" },
+    { value: "pizza", label: "Pizza", group: "Savory" },
+    { value: "cake", label: "Cake", group: "Sweet" },
+    { value: "cookies", label: "Cookies", group: "Savory" },
+    { value: "ice-cream", label: "Ice Cream", group: "Sweet" },
   ];
 
   let favouriteFood = undefined;
@@ -40,11 +40,14 @@
     icon="add"
     error="This is a required field"
   />
-  <Input label="Record" placeholder="Write something here" icon="add" />
+  <div style="display: flex; flex-wrap: nowrap;">
+    <Input placeholder="Write something here" icon="add" />
   <!-- <Input label="Username" placeholder="Enter username..." />
   <Input label="Password" placeholder="Enter password..." type="password" /> -->
 
-  <Select {items} on:select={handleSelect} />
+  <Select icon="add" {items} on:select={handleSelect} />
+  </div>
+  
 </main>
 
 <style lang="scss">

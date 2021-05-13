@@ -2,6 +2,9 @@
 
 .pf-select {
   margin: $spacer;
+  width: 100%;
+  // display: inline;
+  height: $spacer * 8.5;
 
   --border: #{$select-border-width} solid #{$select-border-color};
   --borderRadius: #{$select-border-radius};
@@ -25,10 +28,15 @@
   --clearSelectFocusColor: #{$select-color-focused};
 
   --indicatorColor: #{$select-color};
+  --height: #{$spacer * 8.5};
+  --indicatorTop: #{$spacer * (8.5 / 2) - 10};
 
   &.icon {
     --selectedItemPadding: 0 10px 0 8px;
     --inputPadding: 0 10px 0 40px;
+    .pf-select__icon {
+      color: #{$select-color};
+    }
   }
 
   .listContainer {
@@ -40,6 +48,7 @@
   }
 
   .selectContainer {
+    --padding: #{$select-padding} !important;
     &.focused {
       --indicatorColor: #{$select-color-focused};
 
