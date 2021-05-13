@@ -26,6 +26,11 @@
 
   --indicatorColor: #{$select-color};
 
+  &.icon {
+    --selectedItemPadding: 0 10px 0 8px;
+    --inputPadding: 0 10px 0 40px;
+  }
+
   .listContainer {
     border: #{$select-border-width} solid #{$select-list-border-color};
   }
