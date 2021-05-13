@@ -5,7 +5,8 @@
   export let value: number = 0;
 </script>
 
-<style lang="scss" src="./Record.scss" global />
+<style lang="scss" src="./Record.scss" global>
+</style>
 
 <main>
 </main>
