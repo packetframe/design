@@ -44,7 +44,8 @@
     <Input placeholder="Write something here" icon="add" />
   <!-- <Input label="Username" placeholder="Enter username..." />
   <Input label="Password" placeholder="Enter password..." type="password" /> -->
-
+  <Select icon="remove" {items} on:select={handleSelect} />
+  <Select icon="add" {items} on:select={handleSelect} />
   <Select icon="add" {items} on:select={handleSelect} />
   </div>
   

@@ -8,5 +8,6 @@
 <style lang="scss" src="./Record.scss" global>
 </style>
 
-<main>
-</main>
+<div class="pf-record">
+  
+</div>
