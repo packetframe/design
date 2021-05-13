@@ -19,5 +19,5 @@ import { onMount } from "svelte";
 </style>
 
 <div class="pf-select" class:icon>
-  <Select Icon={icon ? Icon : null} {items} {isClearable} {showIndicator} on:select {$$restProps}></Select>
+  <Select Icon={icon ? Icon : null} {items} {isClearable} {showIndicator} on:select {$$restProps} />
 </div>
