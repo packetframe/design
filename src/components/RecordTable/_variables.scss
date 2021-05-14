@@ -1,0 +1,8 @@
+@import "../../styles/variables";
+
+$record-table-border-radius: $border-radius-root !default;
+$record-table-color: map-get($accent-colors, "7") !default;
+$record-table-background: map-get($elevation-colors, "0") !default;
+
+$header-border-color: map-get($elevation-colors, "16") !default;
+$header-height: 32px;

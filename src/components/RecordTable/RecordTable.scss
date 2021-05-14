@@ -1,0 +1,31 @@
+@import "./variables";
+
+.pf-record-table {
+  border: none;
+  font-size: 14px; //TODO: Decide on font-size system based on sizes...
+  width: calc(100% - 8px); // TODO: make this responsive properly
+  border-collapse: separate;
+  border-spacing: 0px;
+
+  border-radius: $record-table-border-radius;
+  background: $record-table-background;
+  color: $record-table-color;
+  margin: $spacer;
+
+
+  .pf-record-table__tr {
+    color: $record-table-color;
+    text-align: left;
+
+    .pf-record-table__header {
+      padding-left: $spacer * 2;
+      border-bottom: 1px solid $header-border-color;
+      padding-bottom: $spacer * 2;
+    }
+
+  }
+
+  .pf-record-table__spacer {
+    height: $spacer;
+  }
+}

@@ -1,1 +1,8 @@
 @import "../../styles/variables";
+
+$record-border-radius: $border-radius-root !default;
+$record-color: map-get($accent-colors, "7") !default;
+$record-background: map-get($elevation-colors, "0") !default;
+$record-background-zebra: map-get($elevation-colors, "1") !default;
+$record-height: $spacer * 8.5;
+$record-border-active: map-get($accent-colors, "4") !default;

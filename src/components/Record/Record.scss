@@ -1,0 +1,42 @@
+@import "./variables";
+
+.pf-record {
+  border: none;
+  margin: $spacer * 0.5 0px;
+  font-size: 14px; //TODO: Decide on font-size system based on sizes...
+  width: 100%;
+
+  height: $record-height;
+  border-radius: $record-border-radius;
+  background: $record-background;
+  color: $record-color;
+
+  td {
+    padding-left: $spacer * 2;
+    border: solid 1px $record-background;
+    border-left: none;
+    border-right: none;
+    transition: ease border 0.2s;
+  
+    &:first-child { 
+      border-top-left-radius: $record-border-radius; 
+      border-bottom-left-radius: $record-border-radius;
+      border-left: solid 1px $record-background;
+    }
+    &:last-child { 
+      border-top-right-radius: $record-border-radius; 
+      border-bottom-right-radius: $record-border-radius;
+      border-right: solid 1px $record-background;
+    }
+  }
+  
+  &:hover {
+    td {
+      border-color: $record-border-active;
+    }
+  }
+
+  &.zebra td {
+    background: $record-background-zebra;
+  }
+}

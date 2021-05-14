@@ -1,13 +1,21 @@
 <script lang="ts">
-  export let label: string = "";
-  export let rType: string = "";
-  export let ttl: number = 0;
-  export let value: number = 0;
+  type Record = {
+    label: string,
+    type: string,
+    ttl: number,
+    value: string,
+  }
+  export let record: Record;
+  export let zebra: boolean = false;
+
 </script>
 
 <style lang="scss" src="./Record.scss" global>
 </style>
 
-<div class="pf-record">
-  
-</div>
+<tr class="pf-record" class:zebra>
+  <td class="pf-record__label">{record.label}</td>
+  <td class="pf-record__type">{record.type}</td>
+  <td class="pf-record__ttl">{record.ttl}</td>
+  <td class="pf-record__value">{record.value}</td>
+</tr>

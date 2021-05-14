@@ -1,6 +1,8 @@
 <script>
   import Button from "../../components/Button";
   import Input from "../../components/Input";
+import Record from "../../components/Record";
+import RecordTable from "../../components/RecordTable/RecordTable.svelte";
   import Select from "../../components/Select";
 
   const items = [
@@ -16,6 +18,18 @@
   function handleSelect(event) {
     favouriteFood = event.detail;
   }
+
+  let records = [
+    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
+    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
+    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
+    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
+    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
+    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
+    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
+    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
+    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
+  ]
 
 </script>
 
@@ -48,7 +62,7 @@
   <Select icon="add" {items} on:select={handleSelect} />
   <Select icon="add" {items} on:select={handleSelect} />
   </div>
-  
+  <RecordTable {records} />
 </main>
 
 <style lang="scss">
