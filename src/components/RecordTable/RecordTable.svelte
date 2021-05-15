@@ -16,7 +16,7 @@
 
 <table class="pf-record-table">
   <tr class="pf-record-table__tr">
-    {#each ["Label", "Type", "TTL", "Value"] as head}
+    {#each ["Label", "Type", "TTL", "Value", ""] as head}
     <th class="pf-record-table__header">{head}</th>
     {/each}
   </tr>

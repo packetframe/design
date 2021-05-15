@@ -17,7 +17,8 @@
     border-left: none;
     border-right: none;
     transition: ease border 0.2s;
-  
+    height: $record-height;
+
     &:first-child { 
       border-top-left-radius: $record-border-radius; 
       border-bottom-left-radius: $record-border-radius;
@@ -38,5 +39,16 @@
 
   &.zebra td {
     background: $record-background-zebra;
+  }
+
+  .pf-record__arrow {
+    text-align: right;
+    width: 20px;
+    padding-left: 0px;
+    span {
+      padding-top: 4px;
+      padding-right: 8px;
+      font-size: 18px;
+    }
   }
 }

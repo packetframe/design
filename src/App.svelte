@@ -8,7 +8,7 @@
   };
 </script>
 
-<main class=".pf-app">
+<main class="pf-app">
   <Router {routes} />
 </main>
 
