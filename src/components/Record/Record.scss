@@ -45,21 +45,43 @@
     text-align: right;
     width: 20px;
     padding-left: 0px;
+    cursor: pointer;
     span {
       padding-top: 4px;
       padding-right: 8px;
       font-size: 18px;
     }
   }
+
+  &.open {
+    td {
+      border-color: white;
+
+      &:first-child { 
+        border-bottom-left-radius: 0px;
+      }
+      &:last-child { 
+        border-bottom-right-radius: 0px;
+      }
+    }
+  }
 }
 
 .pf-record__dropdown {
-  display: none;
-  height: var(--h);
-  border: 1px solid $record-border-active;
-  border-radius: $record-border-radius;
+  height: 0px;
+  transition: ease height 0.3s;
 
   &.open {
-    display: flex;
+    height: 200px;
+
+    td {
+      border: 1px solid white;
+      border-top: none;
+    }
+  }
+
+  .pf-record__dropdown-wrap {
+    border-bottom-left-radius: $record-border-radius;
+    border-bottom-right-radius: $record-border-radius;
   }
 }
