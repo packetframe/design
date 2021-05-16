@@ -24,7 +24,7 @@
     ><span class="material-icons-round"> arrow_forward </span></td
   >
 </tr>
-<tr class="pf-record__dropdown" class:open style="--h:{open ? 200 : 0}px;">
+<tr class="pf-record__dropdown" class:open>
   <td colspan="5" headers="col2" class="pf-record__dropdown-wrap"></td>
 </tr>
 
