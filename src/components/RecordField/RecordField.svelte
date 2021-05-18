@@ -17,7 +17,7 @@
   {#if type === "A"}
     <Input bind:value={data.labelA} label="Label" />
     <Input label="IPv4 Address" />
-  {:else if type === "A"}
+  {:else if type === "AAAA"}
     <Input label="Label" />
     <Input label="IPv6 Address" />
   {:else if type === "MX"}
