@@ -28,9 +28,9 @@
 </tr>
 <tr class="pf-record__dropdown" class:open>
   <td colspan="5" headers="col2" class="pf-record__dropdown-wrap">
-    {#if open}
+    <div class="pf-record__dropdown-anchor">
       <RecordField />
-    {/if}
+    </div>
   </td>
 </tr>
 
