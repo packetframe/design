@@ -19,18 +19,18 @@
     transition: ease border 0.2s;
     height: $record-height;
 
-    &:first-child { 
-      border-top-left-radius: $record-border-radius; 
+    &:first-child {
+      border-top-left-radius: $record-border-radius;
       border-bottom-left-radius: $record-border-radius;
       border-left: solid 1px $record-background;
     }
-    &:last-child { 
-      border-top-right-radius: $record-border-radius; 
+    &:last-child {
+      border-top-right-radius: $record-border-radius;
       border-bottom-right-radius: $record-border-radius;
       border-right: solid 1px $record-background;
     }
   }
-  
+
   &:hover {
     td {
       border-color: $record-border-active;
@@ -57,10 +57,10 @@
     td {
       border-color: white;
 
-      &:first-child { 
+      &:first-child {
         border-bottom-left-radius: 0px;
       }
-      &:last-child { 
+      &:last-child {
         border-bottom-right-radius: 0px;
       }
     }

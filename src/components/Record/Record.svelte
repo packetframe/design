@@ -20,9 +20,9 @@
   <td id="col2" class="pf-record__type">{record.type}</td>
   <td class="pf-record__ttl">{record.ttl}</td>
   <td class="pf-record__value">{record.value}</td>
-  <td on:click={handleDropdown} class="pf-record__arrow"
-    ><span class="material-icons-round"> arrow_forward </span></td
-  >
+  <td on:click={handleDropdown} class="pf-record__arrow">
+    <span class="material-icons-round">expand_more</span>
+  </td>
 </tr>
 <tr class="pf-record__dropdown" class:open>
   <td colspan="5" headers="col2" class="pf-record__dropdown-wrap"></td>
