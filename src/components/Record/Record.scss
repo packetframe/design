@@ -11,6 +11,8 @@
   background: $record-background;
   color: $record-color;
 
+  word-break: break-all;
+
   td {
     padding-left: $spacer * 2;
     border: solid 1px $record-background;
@@ -24,6 +26,7 @@
       border-bottom-left-radius: $record-border-radius;
       border-left: solid 1px $record-background;
     }
+
     &:last-child {
       border-top-right-radius: $record-border-radius;
       border-bottom-right-radius: $record-border-radius;
@@ -46,6 +49,7 @@
     width: 20px;
     padding-left: 0px;
     cursor: pointer;
+
     span {
       padding-top: 4px;
       padding-right: 8px;
@@ -60,6 +64,7 @@
       &:first-child {
         border-bottom-left-radius: 0px;
       }
+
       &:last-child {
         border-bottom-right-radius: 0px;
       }
@@ -74,6 +79,7 @@
 
   &.open {
     height: 200px;
+
     td {
       height: 200px;
       border: 1px solid white;
@@ -98,4 +104,10 @@
     bottom: 0;
     align-items: flex-end;
   }
+}
+
+.pf-record__value {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
