@@ -1,4 +1,6 @@
 <script lang="ts">
+  import RecordField from "../RecordField";
+
   type Record = {
     label: string;
     type: string;
@@ -12,7 +14,7 @@
 
   const handleDropdown = () => {
     open = !open;
-  }
+  };
 </script>
 
 <tr class="pf-record" class:zebra class:open>
@@ -25,8 +27,11 @@
   </td>
 </tr>
 <tr class="pf-record__dropdown" class:open>
-  <td colspan="5" headers="col2" class="pf-record__dropdown-wrap"></td>
+  <td colspan="5" headers="col2" class="pf-record__dropdown-wrap">
+    {#if open}
+      <RecordField />
+    {/if}
+  </td>
 </tr>
 
-<style lang="scss" src="./Record.scss" global>
-</style>
+<style lang="scss" src="./Record.scss" global />
