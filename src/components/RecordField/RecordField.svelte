@@ -8,7 +8,7 @@
   }
 </script>
 
-<style lang="scss" src="./RecordField.scss" global />
+<style lang="scss" src="./RecordField.scss" global></style>
 
 <main>
   {#if type === "A"}

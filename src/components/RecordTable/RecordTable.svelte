@@ -11,8 +11,7 @@
   export let records: Record[] = [];
 </script>
 
-<style lang="scss" src="./RecordTable.scss" global>
-</style>
+<style lang="scss" src="./RecordTable.scss" global></style>
 
 <table class="pf-record-table">
   <tr class="pf-record-table__tr">
