@@ -9,6 +9,7 @@
   export let icon: string = null;
   export let value: string = "";
   export let fixErrorHeight: boolean = true;
+  export let number: boolean = false;
 
   let focus: boolean;
 
@@ -19,6 +20,8 @@
   const handleBlur = () => {
     focus = false;
   }
+
+  // TODO: This should honor the number parameter, but type binding is a bit weird: https://github.com/sveltejs/svelte/issues/3921
 </script>
 
 <style lang="scss" src="./Input.scss" global>
