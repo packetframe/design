@@ -1,5 +1,6 @@
 <script lang="ts">
   import Input from "../Input";
+  import Button from "../Button";
 
   export let type = "A";
 
@@ -30,5 +31,6 @@
     <Input label="Label" />
     <Input label="Value" />
   {/if}
+  <Button variant="secondary" class="ma-2">Save</Button>
   <span>{recordPreview}</span>
 </div>

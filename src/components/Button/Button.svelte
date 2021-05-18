@@ -1,5 +1,4 @@
 <script lang="ts">
-    
     let userClasses: string = '';
     export { userClasses as class };
     export let size: string = 'default';
