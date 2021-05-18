@@ -3,6 +3,8 @@
 
   export let type = "A";
 
+  let recordPreview = "";
+
   let data = {
     labelA: "test"
   }
@@ -10,7 +12,7 @@
 
 <style lang="scss" src="./RecordField.scss" global></style>
 
-<main>
+<div class="pf-record-field">
   {#if type === "A"}
     <Input bind:value={data.labelA} label="Label" />
     <Input label="IPv4 Address" />
@@ -28,4 +30,5 @@
     <Input label="Label" />
     <Input label="Value" />
   {/if}
-</main>
+  <span>{recordPreview}</span>
+</div>

@@ -72,8 +72,6 @@
   transition: ease height 0.3s;
 
   &.open {
-    height: 200px;
-
     td {
       border: 1px solid white;
       border-top: none;

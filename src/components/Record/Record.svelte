@@ -34,4 +34,5 @@
   </td>
 </tr>
 
-<style lang="scss" src="./Record.scss" global></style>
+<style lang="scss" src="./Record.scss" global>
+</style>

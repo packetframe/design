@@ -1,8 +1,7 @@
 <script>
   import Button from "../../components/Button";
   import Input from "../../components/Input";
-import Record from "../../components/Record";
-import RecordTable from "../../components/RecordTable/RecordTable.svelte";
+  import RecordTable from "../../components/RecordTable/RecordTable.svelte";
   import Select from "../../components/Select";
 
   const items = [
@@ -10,7 +9,7 @@ import RecordTable from "../../components/RecordTable/RecordTable.svelte";
     { value: "pizza", label: "Pizza", group: "Savory" },
     { value: "cake", label: "Cake", group: "Sweet" },
     { value: "cookies", label: "Cookies", group: "Savory" },
-    { value: "ice-cream", label: "Ice Cream", group: "Sweet" },
+    { value: "ice-cream", label: "Ice Cream", group: "Sweet" }
   ];
 
   let favouriteFood = undefined;
@@ -28,17 +27,17 @@ import RecordTable from "../../components/RecordTable/RecordTable.svelte";
     { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
     { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
     { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
-    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
-  ]
+    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" }
+  ];
 
 </script>
 
 <main>
   <h1>Packetframe Design Demo</h1>
-  <a href="https://github.com/packetframe/design"
-    >https://github.com/packetframe/design</a
-  >
-  <br />
+  <a href="https://github.com/packetframe/design">
+    https://github.com/packetframe/design
+  </a>
+  <br>
   <div>
     <Button class="ma-2">Export</Button>
     <Button icon="add" class="ma-2" danger>Export</Button>
@@ -56,25 +55,28 @@ import RecordTable from "../../components/RecordTable/RecordTable.svelte";
   />
   <div style="display: flex; flex-wrap: nowrap;">
     <Input placeholder="Write something here" icon="add" />
-  <!-- <Input label="Username" placeholder="Enter username..." />
-  <Input label="Password" placeholder="Enter password..." type="password" /> -->
-  <Select icon="remove" {items} on:select={handleSelect} />
-  <Select icon="add" {items} on:select={handleSelect} />
-  <Select icon="add" {items} on:select={handleSelect} />
+    <!-- <Input label="Username" placeholder="Enter username..." />
+    <Input label="Password" placeholder="Enter password..." type="password" /> -->
+    <Select icon="remove" {items} on:select={handleSelect} />
+    <Select icon="add" {items} on:select={handleSelect} />
+    <Select icon="add" {items} on:select={handleSelect} />
   </div>
-  <RecordTable {records} />
+  <div style="max-width: 900px; margin: 0 auto;">
+    <RecordTable {records} />
+  </div>
 </main>
 
 <style lang="scss">
   main {
     background-color: #121212;
   }
+
   h1 {
     color: white;
   }
+
   div {
     display: flex;
     flex-wrap: wrap;
   }
-
 </style>
