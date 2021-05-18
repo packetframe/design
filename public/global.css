@@ -10,3 +10,11 @@ body {
 * {
   box-sizing: border-box;
 }
+
+::selection {
+  background: #b03ac6;
+}
+
+::-moz-selection {
+  background: #b03ac6;
+}
