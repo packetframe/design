@@ -23,6 +23,6 @@
   <tr class="pf-record-table__spacer"></tr>
   {#each records as record, i}
   <tr class="pf-record-table__spacer"></tr>
-  <Record {record} zebra={i%2 == 0} />
+  <Record {record} zebra={i%2 === 0} />
   {/each}
 </table>
