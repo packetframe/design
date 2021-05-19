@@ -78,10 +78,10 @@
   overflow: hidden;
 
   &.open {
-    height: 200px;
+    height: 100px;
 
     td {
-      height: 200px;
+      height: 100px;
       border: 1px solid white;
       border-top: none;
     }
@@ -102,7 +102,7 @@
     overflow: hidden;
     position: relative;
     bottom: 0;
-    align-items: flex-end;
+    align-items: center;
   }
 }
 

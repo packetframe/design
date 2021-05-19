@@ -1,8 +1,9 @@
 @import "./variables";
 
 .pf-select {
+  // TODO: The select text label doesn't line up with labels of the Input component
   margin: $spacer;
-  width: 100%;
+  width: auto;
   // display: inline;
   height: $spacer * 8.5;
 

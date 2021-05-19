@@ -3,6 +3,7 @@
   import Input from "../../components/Input";
   import RecordTable from "../../components/RecordTable/RecordTable.svelte";
   import Select from "../../components/Select";
+  import RecordField from "../../components/RecordField/RecordField.svelte";
 
   const items = [
     { value: "chocolate", label: "Chocolate", group: "Sweet" },
@@ -33,7 +34,6 @@
 </script>
 
 <main>
-  <h1>Packetframe Design Demo</h1>
   <a href="https://github.com/packetframe/design">
     https://github.com/packetframe/design
   </a>
@@ -64,6 +64,8 @@
     <Input label="Username" placeholder="Enter username..." />
     <Input label="Password" placeholder="Enter password..." type="password" />
   </div>
+
+  <RecordField />
 
   <div style="max-width: 900px; margin: 0 auto;">
     <RecordTable {records} />

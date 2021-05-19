@@ -20,14 +20,15 @@
     focus = false;
   }
 
-  // NOTE: Don't bind types unless you actually need dynamic input types. Using restProps means you can set the type as a prop using just type="number" and it will stay that type for its lifespan
+  // NOTE: Don't bind types unless you actually need dynamic input types.
+  // Using restProps means you can set the type as a prop using just type="number" and it will stay that type for its lifespan
 </script>
 
 <style lang="scss" src="./Input.scss" global>
 </style>
 
 <!-- svelte-ignore a11y-label-has-associated-control -->
-<label class="pf-input" class:focus class:error={$$slots.error || error}>
+<label class="pf-input {userClasses}" class:focus class:error={$$slots.error || error}>
   {label}
   <div class="pf-input__wrapper">
     {#if icon}
@@ -36,7 +37,7 @@
     <input
       class:disabled
       class:icon
-      class="pf-input__main size-{size} {userClasses}"
+      class="pf-input__main size-{size}"
       {placeholder}
       {disabled}
       {...$$restProps}
