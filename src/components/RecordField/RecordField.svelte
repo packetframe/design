@@ -45,8 +45,8 @@
   {:else if type === "AAAA"}
     <Input bind:value={record.value} label="IPv6 Address" />
   {:else if type === "MX"}
+    <Inpu type="number" label="Priority" min="0" />
     <Input bind:value={record.value} label="Server" />
-    <Input bind:value={record.value} type="number" label="Priority" min="0" />
   {:else if type === "NS"}
     <Input bind:value={record.value} label="Nameserver" />
   {:else if type === "TXT"}
