@@ -55,12 +55,16 @@
   />
   <div style="display: flex; flex-wrap: nowrap;">
     <Input placeholder="Write something here" icon="add" />
-    <!-- <Input label="Username" placeholder="Enter username..." />
-    <Input label="Password" placeholder="Enter password..." type="password" /> -->
     <Select icon="remove" {items} on:select={handleSelect} />
     <Select icon="add" {items} on:select={handleSelect} />
     <Select icon="add" {items} on:select={handleSelect} />
   </div>
+
+  <div style="flex-direction: column; width: 15%">
+    <Input label="Username" placeholder="Enter username..." />
+    <Input label="Password" placeholder="Enter password..." type="password" />
+  </div>
+
   <div style="max-width: 900px; margin: 0 auto;">
     <RecordTable {records} />
   </div>
