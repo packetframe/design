@@ -38,6 +38,14 @@
     width: 34px;
     transition: color $btn-transition, border-color $btn-transition;
     font-size: map-deep-get($packetframe-theme, "font-size", "x-large");
+  
+    &.iconOnly {
+      border-radius: $btn-border-radius;
+      border-width: $btn-border-width;
+      margin-left: 0px;
+      border-left: none;
+      border-right: none;
+    }
   }
 
   // &.rounded {
