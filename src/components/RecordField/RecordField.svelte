@@ -23,7 +23,7 @@
   {:else if type === "MX"}
     <Input label="Label" />
     <Input label="Server" />
-    <Input type="number" label="Priority" />
+    <span class="constrain"><Input type="number" label="Priority" min="0" /></span>
   {:else if type === "NS"}
     <Input label="Label" />
     <Input label="Nameserver" />
