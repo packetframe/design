@@ -37,22 +37,18 @@
 <div class="pf-record-field">
   <Input bind:value={data.labelA} label="Label" />
   <span class="pf-record-field__small-select"><Select label="Type" items={recordTypes} on:select={handleRecordSelect} bind:selectedValue={recordTypes[0]} isDisabled={isInDropdown} /></span>
+  <Input class="small" type="number" label="TTL" placeholder="86400" />
 
   {#if type === "A"}
-    <Input class="small" type="number" label="TTL" placeholder="86400" />
     <Input label="IPv4 Address" />
   {:else if type === "AAAA"}
-    <Input class="small" type="number" label="TTL" placeholder="86400" />
     <Input label="IPv6 Address" />
   {:else if type === "MX"}
-    <Input class="small" type="number" label="TTL" placeholder="86400" />
     <Input label="Server" />
     <Input type="number" label="Priority" min="0" />
   {:else if type === "NS"}
-    <Input class="small" type="number" label="TTL" placeholder="86400" />
     <Input label="Nameserver" />
   {:else if type === "TXT"}
-    <Input class="small" type="number" label="TTL" placeholder="86400" />
     <Input label="Value" />
   {/if}
   <Button variant="secondary" class="ma-2">Save</Button>
