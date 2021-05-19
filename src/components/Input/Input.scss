@@ -6,7 +6,7 @@
   color: $input-color;
   font-size: $label-font-size;
   margin: $spacer;
-  flex-grow: 1;
+  flex: 10 1 auto;
 
   &.focus:not(.error) {
     color: $input-color-focused;

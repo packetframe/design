@@ -5,8 +5,14 @@
   flex-wrap: wrap;
   margin-top: 18px;
   align-items: center;
+  width: 700px;
+  margin: 0 auto;
 }
 
 .pf-record-field__small-select {
   width: 90px;
+}
+
+.small {
+  flex: 0.5 0 100px !important;
 }

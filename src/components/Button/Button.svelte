@@ -32,7 +32,7 @@
         {...$$restProps}
     >
         {#if icon}
-            <span class="pf-btn__icon material-icons">{icon}</span>
+            <span class="pf-btn__icon material-icons" class:iconOnly={!$$slots.default}>{icon}</span>
         {/if}
         {#if $$slots.default}
             <span class="pf-btn__content">
@@ -59,7 +59,7 @@
         {...$$restProps}
     >
         {#if icon}
-            <span class="pf-btn__icon material-icons">{icon}</span>
+            <span class="pf-btn__icon material-icons" class:iconOnly={!$$slots.default}>{icon}</span>
         {/if}
         {#if $$slots.default}
             <span class="pf-btn__content">
