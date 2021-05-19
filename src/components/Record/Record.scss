@@ -57,6 +57,16 @@
     }
   }
 
+  .pf-record__icon {
+    width: 15px;
+
+    span {
+      padding-top: 4px;
+      padding-right: 8px;
+      font-size: 20px;
+    }
+  }
+
   &.open {
     td {
       border-color: white;

@@ -18,12 +18,15 @@
   <td id="col2" class="pf-record__type">{record.type}</td>
   <td class="pf-record__ttl">{record.ttl}</td>
   <td class="pf-record__value">{record.value}</td>
+  <td class="pf-record__icon">
+    <span class="material-icons-round">{record.proxied ? "cloud_queue" : "cloud_off"}</span>
+  </td>
   <td class="pf-record__arrow">
     <span class="material-icons-round">expand_more</span>
   </td>
 </tr>
 <tr class="pf-record__dropdown" class:open>
-  <td colspan="5" headers="col2" class="pf-record__dropdown-wrap">
+  <td colspan="6" headers="col2" class="pf-record__dropdown-wrap">
     <div class="pf-record__dropdown-anchor">
       <RecordField bind:type={record.type} bind:record={record} isInDropdown />
     </div>

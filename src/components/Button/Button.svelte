@@ -34,9 +34,11 @@
         {#if icon}
             <span class="pf-btn__icon material-icons">{icon}</span>
         {/if}
-        <span class="pf-btn__content">
-            <slot></slot>
-        </span>
+        {#if $$slots}
+            <span class="pf-btn__content">
+                <slot></slot>
+            </span>
+        {/if}
     </a>
 {:else}
     <button
@@ -59,8 +61,10 @@
         {#if icon}
             <span class="pf-btn__icon material-icons">{icon}</span>
         {/if}
-        <span class="pf-btn__content">
-            <slot></slot>
-        </span>
+        {#if $$slots.default}
+            <span class="pf-btn__content">
+                <slot></slot>
+            </span>
+        {/if}
     </button>
 {/if}

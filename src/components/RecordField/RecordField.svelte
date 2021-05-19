@@ -7,7 +7,8 @@
   export let record = {
     label: "",
     ttl: 86400,
-    value: ""
+    value: "",
+    proxied: false
   };
   export let type = "A";
   export let isInDropdown = false;
@@ -51,5 +52,6 @@
   {:else if type === "TXT"}
     <Input bind:value={record.value} label="Value" />
   {/if}
+  <Button variant="secondary" icon={record.proxied ? "cloud_queue" : "cloud_off"} on:click={() => record.proxied = !record.proxied} class="ma-2" />
   <Button variant="secondary" class="ma-2">Save</Button>
 </div>
