@@ -78,10 +78,11 @@
   overflow: hidden;
 
   &.open {
-    height: 100px;
+    // TODO: Fix extra height
+    height: 150px;
 
     td {
-      height: 100px;
+      height: 150px;
       border: 1px solid white;
       border-top: none;
     }
@@ -103,6 +104,7 @@
     position: relative;
     bottom: 0;
     align-items: center;
+    margin-left: 13px;
   }
 }
 
