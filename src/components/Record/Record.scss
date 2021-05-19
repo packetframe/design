@@ -76,6 +76,7 @@
   height: 0px;
   transition: ease height 0.3s;
   overflow: hidden;
+  border: 1px solid black;
 
   &.open {
     height: 100px;

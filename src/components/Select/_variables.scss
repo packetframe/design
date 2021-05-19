@@ -23,3 +23,7 @@ $select-item-hover-color: $select-color !default;
 $select-list-border-color: map-get($accent-colors, "5") !default;
 
 $select-padding: $spacer * 2;
+
+// Disabled
+$select-border-color-disabled: map-get($accent-colors, "2") !default;
+$select-color-disabled: $select-border-color-disabled !default;

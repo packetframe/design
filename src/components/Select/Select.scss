@@ -3,9 +3,12 @@
 .pf-select {
   // TODO: The select text label doesn't line up with labels of the Input component
   margin: $spacer;
+  display: flex;
+  flex-direction: column;
   width: auto;
-  // display: inline;
-  height: $spacer * 8.5;
+  padding-bottom: 19px;
+  font-size: 14px;
+  color: $select-color;
 
   --border: #{$select-border-width} solid #{$select-border-color};
   --borderRadius: #{$select-border-radius};
@@ -32,6 +35,10 @@
   --height: #{$spacer * 8.5};
   --indicatorTop: #{$spacer * (8.5 / 2) - 10};
 
+  --disabledBackground: #{$select-background};
+  --disabledBorderColor: #{$select-border-color-disabled};
+  --disabledColor: #{$select-color-disabled};
+
   &.icon {
     --selectedItemPadding: 0 10px 0 8px;
     --inputPadding: 0 10px 0 40px;
@@ -57,5 +64,10 @@
         color: #{$select-color-focused};
       }
     }
+  }
+
+  .pf-select__label {
+    display: flex;
+    padding-bottom: 1px;
   }
 }

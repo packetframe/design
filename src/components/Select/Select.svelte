@@ -16,6 +16,6 @@
 </style>
 
 <label class="pf-select">
-  {label}
-  <Select Icon={icon ? Icon : null} iconProps={icon ? {icon} : null} {items} {isClearable} {isDisabled} {showIndicator} {selectedValue} on:select {$$restProps} />
+  <div class="pf-select__label">{label}</div>
+  <Select Icon={icon ? Icon : null} iconProps={icon ? {icon} : null} {items} {isClearable} {isDisabled} showIndicator={showIndicator && !isDisabled} {selectedValue} on:select {$$restProps} />
 </label>
