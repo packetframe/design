@@ -9,7 +9,6 @@
   export let icon: string = null;
   export let value: string = "";
   export let fixErrorHeight: boolean = true;
-  export let number: boolean = false;
 
   let focus: boolean;
 
@@ -21,7 +20,7 @@
     focus = false;
   }
 
-  // TODO: This should honor the number parameter, but type binding is a bit weird: https://github.com/sveltejs/svelte/issues/3921
+  // NOTE: Don't bind types unless you actually need dynamic input types. Using restProps means you can set the type as a prop using just type="number" and it will stay that type for its lifespan
 </script>
 
 <style lang="scss" src="./Input.scss" global>
