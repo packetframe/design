@@ -12,8 +12,6 @@
   export let type = "A";
   export let isInDropdown = false;
 
-  let recordPreview = "";
-
   let recordTypes = [
     { value: "A", label: "A" },
     { value: "AAAA", label: "AAAA" },
@@ -22,6 +20,7 @@
     { value: "TXT", label: "TXT" }
   ];
 
+  // If the component is in the record edit dropdown, set a static record type
   onMount(() => {
     if (isInDropdown) {
       recordTypes = [{ value: type, label: type }];
@@ -53,5 +52,4 @@
     <Input bind:value={record.value} label="Value" />
   {/if}
   <Button variant="secondary" class="ma-2">Save</Button>
-  <span>{recordPreview}</span>
 </div>
