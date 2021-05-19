@@ -25,7 +25,7 @@
 <tr class="pf-record__dropdown" class:open>
   <td colspan="5" headers="col2" class="pf-record__dropdown-wrap">
     <div class="pf-record__dropdown-anchor">
-      <RecordField bind:type={record.type} isInDropdown />
+      <RecordField bind:type={record.type} bind:record={record} isInDropdown />
     </div>
   </td>
 </tr>

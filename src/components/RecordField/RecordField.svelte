@@ -4,14 +4,15 @@
   import Select from "../Select/Select.svelte";
   import { onMount } from "svelte";
 
+  export let record = {
+    label: "",
+    ttl: 86400,
+    value: ""
+  };
   export let type = "A";
   export let isInDropdown = false;
 
   let recordPreview = "";
-
-  let data = {
-    labelA: "test"
-  };
 
   let recordTypes = [
     { value: "A", label: "A" },
@@ -23,9 +24,9 @@
 
   onMount(() => {
     if (isInDropdown) {
-      recordTypes = [{ value: type, label: type }]
+      recordTypes = [{ value: type, label: type }];
     }
-  })
+  });
 
   function handleRecordSelect(event) {
     type = event.detail.value;
@@ -35,21 +36,21 @@
 <style lang="scss" src="./RecordField.scss" global></style>
 
 <div class="pf-record-field">
-  <Input bind:value={data.labelA} label="Label" />
+  <Input bind:value={record.label} label="Label" />
   <span class="pf-record-field__small-select"><Select label="Type" items={recordTypes} on:select={handleRecordSelect} bind:selectedValue={recordTypes[0]} isDisabled={isInDropdown} /></span>
-  <Input class="small" type="number" label="TTL" placeholder="86400" />
+  <Input class="small" type="number" label="TTL" placeholder="86400" min="0" bind:value={record.ttl} />
 
   {#if type === "A"}
-    <Input label="IPv4 Address" />
+    <Input bind:value={record.value} label="IPv4 Address" />
   {:else if type === "AAAA"}
-    <Input label="IPv6 Address" />
+    <Input bind:value={record.value} label="IPv6 Address" />
   {:else if type === "MX"}
-    <Input label="Server" />
-    <Input type="number" label="Priority" min="0" />
+    <Input bind:value={record.value} label="Server" />
+    <Input bind:value={record.value} type="number" label="Priority" min="0" />
   {:else if type === "NS"}
-    <Input label="Nameserver" />
+    <Input bind:value={record.value} label="Nameserver" />
   {:else if type === "TXT"}
-    <Input label="Value" />
+    <Input bind:value={record.value} label="Value" />
   {/if}
   <Button variant="secondary" class="ma-2">Save</Button>
   <span>{recordPreview}</span>
