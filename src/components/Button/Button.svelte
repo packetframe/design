@@ -34,7 +34,7 @@
         {#if icon}
             <span class="pf-btn__icon material-icons">{icon}</span>
         {/if}
-        {#if $$slots}
+        {#if $$slots.default}
             <span class="pf-btn__content">
                 <slot></slot>
             </span>
