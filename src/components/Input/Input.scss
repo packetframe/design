@@ -6,7 +6,7 @@
   color: $input-color;
   font-size: $label-font-size;
   margin: $spacer;
-  flex: 10 1 auto;
+  flex: 1 1 auto;
 
   &.focus:not(.error) {
     color: $input-color-focused;
@@ -23,7 +23,9 @@
     font-size: $input-font-size;
     color: $input-color;
     height: $spacer * 8.5; // TODO: make this based on size system
-    flex-grow: 1;
+    flex: 1 1 auto;
+    min-width: 0px;
+
     &.icon {
       border-top-left-radius: 0px;
       border-bottom-left-radius: 0px;

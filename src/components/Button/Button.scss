@@ -2,7 +2,7 @@
 @import "../../styles/ripple";
 
 .pf-btn {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   border-radius: $btn-border-radius;
   border: $btn-border-width solid $btn-border-color-solid;
@@ -12,6 +12,7 @@
   color: map-deep-get($packetframe-theme, "text", "primary");
   cursor: pointer;
   $transitions: background-color $btn-transition, border-color $btn-transition;
+  margin: $spacer;
 
   &:focus {
     outline: none;
