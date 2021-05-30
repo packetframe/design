@@ -15,8 +15,7 @@ li {
   position: relative;
 }
 
-li:before {
-  /* TODO: How to make this only apply to active? */
+li.active:before {
   content: "";
   position: absolute;
   bottom: 0;
