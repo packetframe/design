@@ -4,6 +4,7 @@
   import RecordTable from "../../components/RecordTable/RecordTable.svelte";
   import Select from "../../components/Select";
   import RecordField from "../../components/RecordField/RecordField.svelte";
+  import Navbar from "../../components/Navbar/Navbar.svelte";
 
   const items = [
     { value: "chocolate", label: "Chocolate", group: "Sweet" },
@@ -24,7 +25,7 @@
     { label: "packetframe.com", type: "AAAA", ttl: 86400, value: "2001:db8::51:3" },
     { label: "packetframe.com", type: "MX", ttl: 86400, value: "10 mail.example.com." },
     { label: "packetframe.com", type: "TXT", ttl: 86400, value: "v=DKwIDAQAB" },
-    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15", proxied: true},
+    { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15", proxied: true },
     { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
     { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
     { label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15" },
@@ -34,36 +35,38 @@
 </script>
 
 <main>
-  <a href="https://github.com/packetframe/design">
-    https://github.com/packetframe/design
-  </a>
-  <br>
-  <div>
-    <Button class="ma-2">Export</Button>
-    <Button icon="add" class="ma-2" danger>Export</Button>
-    <Button icon="lock" variant="filled" class="ma-2" danger>Export</Button>
-    <Button icon="add" disabled class="ma-2">Export</Button>
-    <Button icon="add" variant="secondary" class="ma-2">Export</Button>
-    <Button variant="flat" icon="lock" class="ma-2" danger>Export</Button>
-  </div>
-  <Input label="Record" placeholder="Write something here" />
-  <Input
-    label="Record"
-    placeholder="Write something here"
-    icon="add"
-    error="This is a required field"
-  />
-  <div style="display: flex; flex-wrap: nowrap;">
-    <Input placeholder="Write something here" icon="add" />
-    <Select icon="remove" {items} on:select={handleSelect} />
-    <Select icon="add" {items} on:select={handleSelect} />
-    <Select icon="add" {items} on:select={handleSelect} />
-  </div>
+<!--  <a href="https://github.com/packetframe/design">-->
+<!--    https://github.com/packetframe/design-->
+<!--  </a>-->
+<!--  <br>-->
+<!--  <div>-->
+<!--    <Button class="ma-2">Export</Button>-->
+<!--    <Button icon="add" class="ma-2" danger>Export</Button>-->
+<!--    <Button icon="lock" variant="filled" class="ma-2" danger>Export</Button>-->
+<!--    <Button icon="add" disabled class="ma-2">Export</Button>-->
+<!--    <Button icon="add" variant="secondary" class="ma-2">Export</Button>-->
+<!--    <Button variant="flat" icon="lock" class="ma-2" danger>Export</Button>-->
+<!--  </div>-->
+<!--  <Input label="Record" placeholder="Write something here" />-->
+<!--  <Input-->
+<!--    label="Record"-->
+<!--    placeholder="Write something here"-->
+<!--    icon="add"-->
+<!--    error="This is a required field"-->
+<!--  />-->
+<!--  <div style="display: flex; flex-wrap: nowrap;">-->
+<!--    <Input placeholder="Write something here" icon="add" />-->
+<!--    <Select icon="remove" {items} on:select={handleSelect} />-->
+<!--    <Select icon="add" {items} on:select={handleSelect} />-->
+<!--    <Select icon="add" {items} on:select={handleSelect} />-->
+<!--  </div>-->
 
-  <div style="flex-direction: column; width: 15%">
-    <Input label="Username" placeholder="Enter username..." />
-    <Input label="Password" placeholder="Enter password..." type="password" />
-  </div>
+<!--  <div style="flex-direction: column; width: 15%">-->
+<!--    <Input label="Username" placeholder="Enter username..." />-->
+<!--    <Input label="Password" placeholder="Enter password..." type="password" />-->
+<!--  </div>-->
+
+  <Navbar />
 
   <div style="max-width: 900px; margin: 0 auto;">
     <RecordField />

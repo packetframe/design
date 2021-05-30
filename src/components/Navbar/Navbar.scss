@@ -1,0 +1,36 @@
+.pf-nav {
+  padding: 0 20px;
+  margin: auto;
+  display: flex;
+}
+
+ul {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+li {
+  list-style-type: none;
+  position: relative;
+}
+
+li:before {
+  /* TODO: How to make this only apply to active? */
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #424245;
+}
+
+ul a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  height: 45px;
+  align-items: center;
+  padding: 0 10px;
+}
