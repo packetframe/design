@@ -55,6 +55,6 @@
       <Input bind:value={record.value} label="Value" />
     {/if}
     <Button variant="secondary" icon={record.proxied ? "cloud_queue" : "cloud_off"} on:click={() => record.proxied = !record.proxied}/>
+    <Button variant="secondary">Save</Button>
   </div>
-  <Button variant="secondary">Save</Button>
 </div>

@@ -90,17 +90,17 @@
 
   &.open {
     // TODO: Fix extra height
-    height: 150px;
+    height: 120px;
 
     td {
-      height: 150px;
+      height: 120px;
       border: 1px solid white;
       border-top: none;
     }
   }
 
   .pf-record__dropdown-wrap {
-    height: 0px;
+    height: 0;
     overflow: hidden;
     border-bottom-left-radius: $record-border-radius;
     border-bottom-right-radius: $record-border-radius;
@@ -115,6 +115,8 @@
     position: relative;
     bottom: 0;
     align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
