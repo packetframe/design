@@ -35,36 +35,36 @@
 </script>
 
 <main>
-<!--  <a href="https://github.com/packetframe/design">-->
-<!--    https://github.com/packetframe/design-->
-<!--  </a>-->
-<!--  <br>-->
-<!--  <div>-->
-<!--    <Button class="ma-2">Export</Button>-->
-<!--    <Button icon="add" class="ma-2" danger>Export</Button>-->
-<!--    <Button icon="lock" variant="filled" class="ma-2" danger>Export</Button>-->
-<!--    <Button icon="add" disabled class="ma-2">Export</Button>-->
-<!--    <Button icon="add" variant="secondary" class="ma-2">Export</Button>-->
-<!--    <Button variant="flat" icon="lock" class="ma-2" danger>Export</Button>-->
-<!--  </div>-->
-<!--  <Input label="Record" placeholder="Write something here" />-->
-<!--  <Input-->
-<!--    label="Record"-->
-<!--    placeholder="Write something here"-->
-<!--    icon="add"-->
-<!--    error="This is a required field"-->
-<!--  />-->
-<!--  <div style="display: flex; flex-wrap: nowrap;">-->
-<!--    <Input placeholder="Write something here" icon="add" />-->
-<!--    <Select icon="remove" {items} on:select={handleSelect} />-->
-<!--    <Select icon="add" {items} on:select={handleSelect} />-->
-<!--    <Select icon="add" {items} on:select={handleSelect} />-->
-<!--  </div>-->
+  <a href="https://github.com/packetframe/design">
+    https://github.com/packetframe/design
+  </a>
+  <br>
+  <div>
+    <Button class="ma-2">Export</Button>
+    <Button icon="add" class="ma-2" danger>Export</Button>
+    <Button icon="lock" variant="filled" class="ma-2" danger>Export</Button>
+    <Button icon="add" disabled class="ma-2">Export</Button>
+    <Button icon="add" variant="secondary" class="ma-2">Export</Button>
+    <Button variant="flat" icon="lock" class="ma-2" danger>Export</Button>
+  </div>
+  <Input label="Record" placeholder="Write something here" />
+  <Input
+    label="Record"
+    placeholder="Write something here"
+    icon="add"
+    error="This is a required field"
+  />
+  <div style="display: flex; flex-wrap: nowrap;">
+    <Input placeholder="Write something here" icon="add" />
+    <Select icon="remove" {items} on:select={handleSelect} />
+    <Select icon="add" {items} on:select={handleSelect} />
+    <Select icon="add" {items} on:select={handleSelect} />
+  </div>
 
-<!--  <div style="flex-direction: column; width: 15%">-->
-<!--    <Input label="Username" placeholder="Enter username..." />-->
-<!--    <Input label="Password" placeholder="Enter password..." type="password" />-->
-<!--  </div>-->
+  <div style="flex-direction: column; width: 15%">
+    <Input label="Username" placeholder="Enter username..." />
+    <Input label="Password" placeholder="Enter password..." type="password" />
+  </div>
 
   <Navbar />
 
@@ -72,6 +72,8 @@
     <RecordField />
     <RecordTable {records} />
   </div>
+
+  <footer>&copy; Packetframe 2021</footer>
 </main>
 
 <style lang="scss">
@@ -86,5 +88,11 @@
   div {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  footer {
+    margin: 15px;
+    color: white;
+    text-align: center;
   }
 </style>
