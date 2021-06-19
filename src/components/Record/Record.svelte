@@ -19,7 +19,9 @@
   <td class="pf-record__ttl">{record.ttl}</td>
   <td class="pf-record__value">{record.value}</td>
   <td class="pf-record__icon">
-    <span class="material-icons-round">{record.proxied ? "cloud_queue" : "cloud_off"}</span>
+    {#if record.proxied}
+      <span class="material-icons-round">cloud_queue</span>
+    {/if}
   </td>
   <td class="pf-record__arrow">
     <span class="material-icons-round">expand_more</span>
