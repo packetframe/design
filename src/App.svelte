@@ -1,19 +1,20 @@
 <script lang="ts">
-  import Router from "svelte-spa-router";
+    import Router from "svelte-spa-router";
 
-  import Index from "./demo/pages/Index.svelte";
+    import Index from "./demo/pages/Index.svelte";
 
-  const routes = {
-    "/": Index
-  };
+    const routes = {
+        "/": Index
+    };
 </script>
 
 <main class="pf-app">
-  <Router {routes} />
+    <Router {routes}/>
 </main>
 
-<style lang="scss" global>
+<style global lang="scss">
   @import './styles/global';
+
   .pf-app {
     width: 100%;
     min-height: 100vh;
