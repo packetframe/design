@@ -59,7 +59,7 @@
         {:else if type === "AAAA"}
             <Input bind:value={record.value} label="IPv6 Address"/>
         {:else if type === "MX"}
-            <Input type="number" label="Priority" min="0"/>
+            <Input class="small" type="number" label="Priority" min="0"/>
             <Input bind:value={record.value} label="Server"/>
         {:else if type === "NS"}
             <Input bind:value={record.value} label="Nameserver"/>
@@ -72,9 +72,9 @@
                 { value: "UDP", label: "UDP" },
                 { value: "TLS", label: "TLS" }
                 ]} bind:selectedValue={protocol}/>
-            <Input type="number" label="Priority" min="0" bind:selectedValue={priority}/>
-            <Input type="number" label="Weight" min="0" bind:selectedValue={weight}/>
-            <Input type="number" label="Port" min="0" bind:selectedValue={port}/>
+            <Input class="small" type="number" label="Priority" min="0" bind:selectedValue={priority}/>
+            <Input class="small" type="number" label="Weight" min="0" bind:selectedValue={weight}/>
+            <Input class="small" type="number" label="Port" min="0" bind:selectedValue={port}/>
             <Input bind:value={record.value} label="Target"/>
         {/if}
         <Button icon={record.proxied ? "cloud_queue" : "cloud_off"} on:click={() => record.proxied = !record.proxied} variant="secondary"/>
