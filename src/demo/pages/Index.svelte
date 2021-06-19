@@ -26,10 +26,11 @@
         {label: "packetframe.com", type: "MX", ttl: 86400, value: "10 mail.example.com."},
         {label: "packetframe.com", type: "TXT", ttl: 86400, value: "v=DKwIDAQAB"},
         {label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15", proxied: true},
+        {label: "packetframe.com", type: "SRV", ttl: 86400, value: "23.141.0.15"},
         {label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15"},
         {label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15"},
         {label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15"},
-        {label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15"}
+        {label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15"},
     ];
 
 </script>
