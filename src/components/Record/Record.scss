@@ -119,8 +119,9 @@
   }
 }
 
-.pf-record__value {
+.pf-record__value, .pf-record__label {
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  max-width: 140px;
 }
