@@ -32,6 +32,12 @@
     function handleRecordSelect(event) {
         type = event.detail.value;
     }
+
+    // Record values
+    let priority = 0;
+    let weight = 0;
+    let port = 0;
+    let protocol = "TCP";
 </script>
 
 <style global lang="scss" src="./RecordField.scss">
@@ -65,10 +71,10 @@
                 { value: "TCP", label: "TCP" },
                 { value: "UDP", label: "UDP" },
                 { value: "TLS", label: "TLS" }
-                ]}/>
-            <Input type="number" label="Priority" min="0"/>
-            <Input type="number" label="Weight" min="0"/>
-            <Input type="number" label="Port" min="0"/>
+                ]} bind:selectedValue={protocol}/>
+            <Input type="number" label="Priority" min="0" bind:selectedValue={priority}/>
+            <Input type="number" label="Weight" min="0" bind:selectedValue={weight}/>
+            <Input type="number" label="Port" min="0" bind:selectedValue={port}/>
             <Input bind:value={record.value} label="Target"/>
         {/if}
         <Button icon={record.proxied ? "cloud_queue" : "cloud_off"} on:click={() => record.proxied = !record.proxied} variant="secondary"/>
