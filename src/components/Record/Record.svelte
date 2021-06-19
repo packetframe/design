@@ -25,13 +25,15 @@
     <span class="material-icons-round">expand_more</span>
   </td>
 </tr>
-<tr class="pf-record__dropdown" class:open>
-  <td colspan="6" headers="col2" class="pf-record__dropdown-wrap">
-    <div class="pf-record__dropdown-anchor">
-      <RecordField bind:type={record.type} bind:record={record} isInDropdown />
-    </div>
-  </td>
-</tr>
+{#if open}
+  <tr class="pf-record__dropdown" class:open>
+    <td colspan="6" headers="col2" class="pf-record__dropdown-wrap">
+      <div class="pf-record__dropdown-anchor">
+        <RecordField bind:type={record.type} bind:record={record} isInDropdown />
+      </div>
+    </td>
+  </tr>
+{/if}
 
 <style lang="scss" src="./Record.scss" global>
 </style>
