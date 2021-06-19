@@ -89,11 +89,10 @@
   border: 1px solid black;
 
   &.open {
-    // TODO: Fix extra height
-    height: 120px;
+    height: auto;
 
     td {
-      height: 120px;
+      height: auto;
       border: 1px solid white;
       border-top: none;
     }
