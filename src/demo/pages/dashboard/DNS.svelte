@@ -26,7 +26,7 @@
     <Title>
         <div slot="header">DNS</div>
         <div slot="items">
-            <Select bind:selectedValue={zone} items={zones}/>
+            <Select bind:selectedValue={zone} items={zones} isSearchable/>
         </div>
     </Title>
     <RecordField/>
