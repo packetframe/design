@@ -1,0 +1,35 @@
+@import './variables';
+
+.pf-title {
+    color: $title-color;
+    background: $title-background;
+    border-bottom: $title-border-width solid $title-border-color;
+
+    margin: $spacer auto;
+    height: $spacer * 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .pf-title__header {
+        font-size: $title-font-size;
+        font-weight: bold;
+        display: flex;
+        line-height: 1;
+    }
+
+    .pf-title__items {
+        display: flex;
+
+        .pf-select {
+            --border: none !important;
+            .selectContainer {
+                div:not([class]) {
+                    right: 0;
+                    left: initial !important;
+                }
+            }
+        }
+    }
+}

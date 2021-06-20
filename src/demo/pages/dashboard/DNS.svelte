@@ -1,6 +1,8 @@
 <script>
     import RecordTable from "../../../components/RecordTable";
     import RecordField from "../../../components/RecordField";
+    import Title from "../../../components/Title";
+    import Select from "../../../components/Select";
 
     let records = [
         {label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15"},
@@ -14,9 +16,19 @@
         {label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15"},
         {label: "packetframe.com", type: "A", ttl: 86400, value: "23.141.0.15"},
     ];
+
+    let zones = ["example.com", "packetframe.com"];
+    let zone = zones[0];
+
 </script>
 
 <main>
+    <Title>
+        <div slot="header">DNS</div>
+        <div slot="items">
+            <Select bind:selectedValue={zone} items={zones}/>
+        </div>
+    </Title>
     <RecordField/>
     <RecordTable {records}/>
 </main>

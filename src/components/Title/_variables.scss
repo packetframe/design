@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+
+$title-border-color: map-deep-get(
+    $packetframe-theme,
+    "border",
+    "primary"
+  ) !default;
+$title-border-width: $border-width-root !default;
+
+$title-color: $title-border-color !default;
+$title-font-size: map-deep-get(
+    $packetframe-theme,
+    "font-size",
+    "x-large"
+  ) !default;
+$title-background: map-get($elevation-colors, "0") !default;

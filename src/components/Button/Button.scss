@@ -38,7 +38,7 @@
     height: 34px;
     width: 34px;
     transition: color $btn-transition, border-color $btn-transition;
-    font-size: map-deep-get($packetframe-theme, "font-size", "x-large");
+    font-size: map-deep-get($packetframe-theme, "font-size", "large");
   
     &.iconOnly {
       border-radius: $btn-border-radius;

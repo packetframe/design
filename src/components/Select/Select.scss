@@ -38,9 +38,12 @@
   --disabledBorderColor: #{$select-border-color-disabled};
   --disabledColor: #{$select-color-disabled};
 
+  // --inputPadding: 0px 40px 0px;
+  --selectedItemPadding: 0 30px 0 0px;
+
   &.icon {
     --selectedItemPadding: 0 10px 0 8px;
-    --inputPadding: 0 0px 0 40px;
+    --inputPadding: 0 40px 0 40px;
     .pf-select__icon {
       color: #{$select-color};
     }
