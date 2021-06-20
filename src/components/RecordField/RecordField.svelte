@@ -67,11 +67,7 @@
             <Input bind:value={record.value} label="Value"/>
         {:else if type === "SRV"}
             <Input label="Service"/>
-            <Select label="Protocol" items={[
-                { value: "TCP", label: "TCP" },
-                { value: "UDP", label: "UDP" },
-                { value: "TLS", label: "TLS" }
-                ]} bind:selectedValue={protocol}/>
+            <Select label="Protocol" items={["TCP", "UDP", "TLS"]} bind:selectedValue={protocol}/>
             <Input class="small" type="number" label="Priority" min="0" bind:selectedValue={priority}/>
             <Input class="small" type="number" label="Weight" min="0" bind:selectedValue={weight}/>
             <Input class="small" type="number" label="Port" min="0" bind:selectedValue={port}/>
@@ -80,5 +76,8 @@
         <Button icon={record.proxied ? "cloud_queue" : "cloud_off"} on:click={() => record.proxied = !record.proxied}
                 variant="secondary"/>
         <Button variant="secondary">{isInDropdown ? "Save" : "Add"}</Button>
+        {#if isInDropdown}
+            <Button iconStyle="color: #cc0000" variant="secondary" icon="delete"/>
+        {/if}
     </div>
 </div>
