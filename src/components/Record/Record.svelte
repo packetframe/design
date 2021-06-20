@@ -1,5 +1,6 @@
 <script lang="ts">
   import RecordField from "../RecordField";
+  import Button from "../Button";
 
   type Record = {
     label: string;
@@ -23,13 +24,18 @@
       <span class="material-icons-round">cloud_queue</span>
     {/if}
   </td>
+  <td style="width: 34px">
+      <span on:click={() => {
+         prompt("Are you sure you want to delete this record?")
+      }} class="material-icons-round">delete_outline</span>
+  </td>
   <td class="pf-record__arrow">
     <span class="material-icons-round">expand_more</span>
   </td>
 </tr>
 {#if open}
   <tr class="pf-record__dropdown" class:open>
-    <td colspan="6" headers="col2" class="pf-record__dropdown-wrap">
+    <td colspan="7" headers="col2" class="pf-record__dropdown-wrap">
       <div class="pf-record__dropdown-anchor">
         <RecordField bind:type={record.type} bind:record={record} isInDropdown />
       </div>
