@@ -1,6 +1,7 @@
 <script>
     import Input from "../../../components/Input";
     import Button from "../../../components/Button";
+    import Title from "../../../components/Title";
 
     let containers = [
         {hostname: "c1.example.com", image: "packetframe/edge-demo", ports: ["5000:5000"]},
@@ -15,7 +16,9 @@
 </script>
 
 <main>
-    <h1>Containers</h1>
+    <Title>
+        <div slot="header">Containers</div>
+    </Title>
     <div class="pf-containers-inputs">
         <div style="width: 50%; display: flex; flex-direction: column; align-items: stretch;">
             <Input label="Hostname"/>
@@ -42,7 +45,7 @@
                 <tr class="pf-record" class:zebra={i%2 === 0}>
                     <td class="pf-record__label">{container.hostname}</td>
                     <td class="pf-record__type">{container.image}</td>
-                    <td class="pf-record__type">{container.ports}</td>
+                    <td class="pf-record__type">{container.ports.join(", ")}</td>
                     <td class="pf-record__arrow">
                         <span style="color: #cc0000" class="material-icons-round">delete</span>
                     </td>
