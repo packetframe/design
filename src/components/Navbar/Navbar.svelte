@@ -1,9 +1,5 @@
 <script>
     import {location} from "svelte-spa-router";
-    import Select from "../Select/Select.svelte";
-
-    let zones = ["example.com"];
-    let zone = zones[0];
 
     const elements = [
         {label: "DNS", href: "/dashboard/dns"},
@@ -17,7 +13,6 @@
     <nav class="pf-nav">
         <ul style="justify-content: flex-start">
             <img style="width: 230px" src="/images/logo.png" alt="Logo">
-            <li><Select bind:selectedValue={zone} items={zones}/></li>
         </ul>
     </nav>
 
