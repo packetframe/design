@@ -15,7 +15,7 @@
 <style lang="scss" src="./Select.scss" global>
 </style>
 
-<label class="pf-select">
+<label class="pf-select" style="{label === '' ? '': 'padding-bottom: 19px;'}">
   <div class="pf-select__label">{label}</div>
   <Select Icon={icon ? Icon : null} iconProps={icon ? {icon} : null} {items} {isClearable} {isDisabled} showIndicator={showIndicator && !isDisabled} {selectedValue} on:select {$$restProps} />
 </label>

@@ -1,7 +1,7 @@
 <script lang="ts">
     import Input from "../Input";
     import Button from "../Button";
-    import Select from "../Select/Select.svelte";
+    import Select from "../Select";
     import {onMount} from "svelte";
 
     export let record = {
@@ -77,7 +77,8 @@
             <Input class="small" type="number" label="Port" min="0" bind:selectedValue={port}/>
             <Input bind:value={record.value} label="Target"/>
         {/if}
-        <Button icon={record.proxied ? "cloud_queue" : "cloud_off"} on:click={() => record.proxied = !record.proxied} variant="secondary"/>
-        <Button variant="secondary">Save</Button>
+        <Button icon={record.proxied ? "cloud_queue" : "cloud_off"} on:click={() => record.proxied = !record.proxied}
+                variant="secondary"/>
+        <Button variant="secondary">{isInDropdown ? "Save" : "Add"}</Button>
     </div>
 </div>
