@@ -65,12 +65,17 @@
 
   .pf-containers-env {
     width: 50%;
-    height: 100%;
-    display: inline-flex;
-    align-items: stretch;
+    :global(.pf-input) {
+        height: 100% !important;
+    }
+
+    :global(.pf-input .pf-input__wrapper) {
+        height: calc(100% - 45px);
+    }
   }
 
   .pf-containers-inputs {
     display: flex;
+    
   }
 </style>
