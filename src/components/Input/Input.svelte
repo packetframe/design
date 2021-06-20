@@ -1,6 +1,7 @@
 <script lang="ts">
   let userClasses: string = "";
   export { userClasses as class };
+  export let inputClasses: string = "";
   export let placeholder: string = "";
   export let label: string = "";
   export let error: string = null;
@@ -9,6 +10,7 @@
   export let icon: string = null;
   export let value: string = "";
   export let fixErrorHeight: boolean = true;
+  export let textarea: boolean = false;
 
   let focus: boolean;
 
@@ -34,19 +36,35 @@
     {#if icon}
     <span class="material-icons pf-input__icon">{icon}</span>
     {/if}
-    <input
-      class:disabled
-      class:icon
-      class="pf-input__main size-{size}"
-      {placeholder}
-      {disabled}
-      {...$$restProps}
-      on:focus={handleFocus}
-      on:blur={handleBlur}
-      on:input
-      on:change
-      bind:value
-    />
+    {#if !textarea}
+      <input
+        class:disabled
+        class:icon
+        class="pf-input__main size-{size} {inputClasses}"
+        {placeholder}
+        {disabled}
+        {...$$restProps}
+        on:focus={handleFocus}
+        on:blur={handleBlur}
+        on:input
+        on:change
+        bind:value
+      />
+    {:else}
+      <textarea
+        class:disabled
+        class:icon
+        class="pf-input__main size-{size} {inputClasses}"
+        {placeholder}
+        {disabled}
+        {...$$restProps}
+        on:focus={handleFocus}
+        on:blur={handleBlur}
+        on:input
+        on:change
+        bind:value
+      ></textarea>
+    {/if}
   </div>
   {#if error || fixErrorHeight}
   <span class="pf-input__error">{error ? error : ""}</span>
