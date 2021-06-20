@@ -41,7 +41,7 @@
 
   &.icon {
     --selectedItemPadding: 0 10px 0 8px;
-    --inputPadding: 0 10px 0 40px;
+    --inputPadding: 0 0px 0 40px;
     .pf-select__icon {
       color: #{$select-color};
     }
@@ -63,6 +63,14 @@
       .selectedItem {
         color: #{$select-color-focused};
       }
+    }
+
+    .indicator {
+      z-index: 1;
+    }
+
+    input {
+      z-index: 2;
     }
   }
 

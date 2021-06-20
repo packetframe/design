@@ -67,6 +67,8 @@
         <Input label="Password" placeholder="Enter password..." type="password"/>
     </div>
 
+    <Select icon="add" {items} on:select={handleSelect}/>
+
     <Navbar/>
 
     <div style="max-width: 900px; margin: 0 auto;">
