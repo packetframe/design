@@ -37,7 +37,6 @@
     let priority = 0;
     let weight = 0;
     let port = 0;
-    let protocol = "TCP";
 </script>
 
 <style global lang="scss" src="./RecordField.scss">
@@ -66,8 +65,6 @@
         {:else if type === "TXT"}
             <Input bind:value={record.value} label="Value"/>
         {:else if type === "SRV"}
-            <Input label="Service"/>
-            <Select label="Protocol" items={["TCP", "UDP", "TLS"]} bind:selectedValue={protocol}/>
             <Input class="small" type="number" label="Priority" min="0" bind:selectedValue={priority}/>
             <Input class="small" type="number" label="Weight" min="0" bind:selectedValue={weight}/>
             <Input class="small" type="number" label="Port" min="0" bind:selectedValue={port}/>
@@ -76,8 +73,5 @@
         <Button icon={record.proxied ? "cloud_queue" : "cloud_off"} on:click={() => record.proxied = !record.proxied}
                 variant="secondary"/>
         <Button variant="secondary">{isInDropdown ? "Save" : "Add"}</Button>
-        {#if isInDropdown}
-            <Button iconStyle="color: #cc0000" variant="secondary" icon="delete"/>
-        {/if}
     </div>
 </div>
