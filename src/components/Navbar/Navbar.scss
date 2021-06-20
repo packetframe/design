@@ -1,6 +1,5 @@
 .pf-nav {
   padding: 0 20px;
-  margin: auto;
   display: flex;
 }
 
@@ -13,6 +12,8 @@ ul {
 li {
   list-style-type: none;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 li.active:before {
@@ -32,4 +33,12 @@ ul a {
   height: 45px;
   align-items: center;
   padding: 0 10px;
+}
+
+.pf-navs {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }

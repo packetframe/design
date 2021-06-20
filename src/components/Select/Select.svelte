@@ -17,7 +17,7 @@
 </style>
 
 <!-- svelte-ignore a11y-label-has-associated-control -->
-<label class="pf-select" class:icon>
+<label class="pf-select" style="{label === '' ? '': 'padding-bottom: 19px;'}" class:icon>
   <div class="pf-select__label">{label}</div>
   <Select Icon={icon ? Icon : null} iconProps={icon ? {icon} : null} {isSearchable} {items} {isClearable} {isDisabled} showIndicator={showIndicator && !isDisabled} {selectedValue} on:select {$$restProps} />
 </label>

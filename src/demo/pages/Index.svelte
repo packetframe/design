@@ -75,8 +75,6 @@
         <RecordField/>
         <RecordTable {records}/>
     </div>
-
-    <footer>&copy; Packetframe 2021</footer>
 </main>
 
 <style lang="scss">
