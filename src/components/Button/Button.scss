@@ -58,7 +58,7 @@
   // }
 
   &:not(.disabled):not(.flat):not(.danger) {
-    // These styles hould never apply when we are disabled.
+    // These styles should never apply when we are disabled.
     @include ripple(
       $btn-background-filled,
       $btn-background-active,
