@@ -67,14 +67,10 @@
         <Input label="Password" placeholder="Enter password..." type="password"/>
     </div>
 
-    <Navbar/>
-
     <div style="max-width: 900px; margin: 0 auto;">
         <RecordField/>
         <RecordTable {records}/>
     </div>
-
-    <footer>&copy; Packetframe 2021</footer>
 </main>
 
 <style lang="scss">
