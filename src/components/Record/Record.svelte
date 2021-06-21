@@ -15,6 +15,17 @@
 </script>
 
 <tr class="pf-record" class:zebra class:open on:click={() => open = !open}>
+  <td class="pf-record__checkbox">
+    <!-- svelte-ignore a11y-label-has-associated-control -->
+    <label class="checkbox">
+      <span class="checkbox__input">
+        <input on:click|stopPropagation type="checkbox" name="checkbox" />
+        <span class="checkbox__control">
+          <span class="bg"></span>
+        </span>
+      </span>
+    </label>
+  </td>
   <td class="pf-record__label">{record.label}</td>
   <td id="col2" class="pf-record__type">{record.type}</td>
   <td class="pf-record__ttl">{record.ttl}</td>
@@ -24,11 +35,11 @@
       <span class="material-icons-round">cloud_queue</span>
     {/if}
   </td>
-  <td style="width: 34px">
+  <!-- <td style="width: 34px">
       <span on:click={() => {
          prompt("Are you sure you want to delete this record?")
       }} class="material-icons-round">delete_outline</span>
-  </td>
+  </td> -->
   <td class="pf-record__arrow">
     <span class="material-icons-round">expand_more</span>
   </td>

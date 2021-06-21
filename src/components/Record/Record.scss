@@ -32,6 +32,71 @@
       border-bottom-right-radius: $record-border-radius;
       border-right: solid 1px $record-background;
     }
+
+    &.pf-record__checkbox {
+      width: 3em;
+
+      .checkbox {
+        display: grid;
+        grid-template-columns: min-content auto;
+        grid-gap: 0.5em;
+        
+
+        .checkbox__control {
+          display: inline-grid;
+          width: 1em;
+          height: 1em;
+          border-radius: 0.25em;
+          border: 1px solid $record-border-active;
+          overflow: hidden;
+          background-color: transparent;
+          z-index: 2;
+
+          .bg {
+            position: relative;
+            top: 0em;
+            left: 0em;
+            width: 0em;
+            height: 0em;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background-color: $record-border-active;
+            transition: ease width 0.3s, ease height 0.3s;
+            z-index: 1;
+          }
+        }
+
+        .checkbox__input {
+          input {
+            opacity: 0;
+            width: 1em;
+            height: 1em;
+            cursor: pointer;
+            z-index: 3;
+
+            &:checked + .checkbox__control {
+              .bg {
+                width: 2.5em;
+                height: 2.5em;
+              }
+              
+            }
+
+            &:focus + .checkbox__control {
+              border-color: white;
+            }
+          }
+
+          display: grid;
+          grid-template-areas: "checkbox";
+        
+          > * {
+            grid-area: checkbox;
+          }
+        }
+      }
+    }
+
   }
 
   &:hover {
