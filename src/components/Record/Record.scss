@@ -39,8 +39,8 @@
       .checkbox {
         display: grid;
         grid-template-columns: min-content auto;
-        grid-gap: 0.5em;
-        
+        grid-gap: 0em;
+        width: 1em;
 
         .checkbox__control {
           display: inline-grid;
