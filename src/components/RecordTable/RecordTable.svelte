@@ -20,9 +20,21 @@
   $: selectionStates = records.map(r => {return {data: r, selected: false}});
 
   let deleteIcon: string = "delete_outline";
+
+  let innerWidth;
+  let isLarge: boolean = true;
+
+  $: if (innerWidth <= 800 && isLarge) {
+    isLarge = false;
+  } else if (innerWidth >= 800 && !isLarge) {
+    isLarge = true;
+  }
 </script>
 
+<svelte:window bind:innerWidth />
+
 <main>
+  {#if isLarge}
   <table class="pf-record-table">
     <tr class="pf-record-table__tr">
       {#if allowSelection && allowDeletion}
@@ -42,6 +54,13 @@
       <Record {allowDeletion} {allowSelection} handleSelection={(s, d, e) => {selectionStates[i].selected = s; handleSelection(s, d, e)}} {record} zebra={i%2 === 0} />
     {/each}
   </table>
+  {:else}
+    <div class="pf-record-table_mobile">
+      {#each records as record, i}
+      <Record mobile {allowDeletion} {allowSelection} handleSelection={(s, d, e) => {selectionStates[i].selected = s; handleSelection(s, d, e)}} {record} zebra={i%2 === 0} />
+      {/each}
+    </div>
+  {/if}
 </main>
 
 <style lang="scss" src="./RecordTable.scss" global></style>

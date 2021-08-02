@@ -29,7 +29,9 @@
             <Select bind:selectedValue={zone} items={zones} isSearchable/>
         </div>
     </Title>
-    <RecordField/>
+    <div style="margin: 12px">
+        <RecordField/>
+    </div>
     <RecordTable {records}/>
 </main>
 
