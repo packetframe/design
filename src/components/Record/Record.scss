@@ -50,17 +50,6 @@
       }
 
     }
-
-    +.pf-record__dropdown {
-      display: flex;
-      margin: 0px $spacer * 4;
-      border: none;
-
-      td {
-        border-width: 3px;
-        border-color: $record-background-zebra;
-      }
-    }
   }
 
   td {
@@ -210,6 +199,17 @@
       height: auto;
       border: 1px solid white;
       border-top: none;
+    }
+  }
+
+  &.mobile {
+    display: flex;
+    margin: 0px $spacer * 4;
+    border: none;
+
+    td {
+      border-width: 3px;
+      border-color: $record-background-zebra;
     }
   }
 

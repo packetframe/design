@@ -12,6 +12,7 @@
     };
     export let type = "A";
     export let isInDropdown = false;
+    export let mobile = false;
 
     let recordTypes = [
         {value: "A", label: "A"},
@@ -42,7 +43,7 @@
 <style global lang="scss" src="./RecordField.scss">
 </style>
 
-<div class="pf-record-field">
+<div class="pf-record-field" class:mobile>
     <div class="pf-record-field__row">
         <Input bind:value={record.label} label="Label"/>
         <span class="pf-record-field__small-select">
