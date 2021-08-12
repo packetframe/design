@@ -28,16 +28,31 @@
       border-bottom-left-radius: 0px;
       border-bottom-right-radius: 0px;
     }
+
+    .pf-record-mobile__wrapper {
+      display: flex;
+      flex-direction: column;
+      max-width: calc(100% - 36px - #{$spacer} * 4);
+    }
     
     span.pf-record-field {
       display: flex;
       flex-grow: 1;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
       margin: 0px;
-      
+
       background: $record-background-zebra;
       border-left: none;
       border-right: none;
       transition: ease border 0.2s;
+
+      .material-icons {
+        font-size: 20px;
+        display: flex;
+        padding-top: 2px;
+      }
       
 
       &.pf-record__type {
@@ -47,8 +62,9 @@
 
       &.pf-record__value, &.pf-record__label {
         max-width: 100%;
+        text-overflow: ellipsis;
+        white-space: pre-wrap;
       }
-
     }
   }
 

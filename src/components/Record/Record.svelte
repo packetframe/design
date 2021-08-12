@@ -27,9 +27,13 @@
 <tr class="pf-record" class:mobile class:zebra class:open on:click={() => {if (!mobile) {open = !open}}}>
   
   {#if mobile}
-    <div style="display: flex; flex-direction: column;">
+    <div class="pf-record-mobile__wrapper">
       <span class="pf-record-field pf-record__type">{record.type}</span>
-      <span class="pf-record-field pf-record__label">{record.label} --> {record.value}</span>
+      <span class="pf-record-field pf-record__label">
+        {record.label}
+        <span class="material-icons">arrow_right</span>
+        {record.value}
+      </span>
     </div>
     <Button variant="secondary" icon="tune" on:click={() => {open = !open}} />
     
