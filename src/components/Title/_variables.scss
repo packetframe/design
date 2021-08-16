@@ -14,3 +14,5 @@ $title-font-size: map-deep-get(
     "x-large"
   ) !default;
 $title-background: map-get($elevation-colors, "0") !default;
+
+$title-margin: 0px;

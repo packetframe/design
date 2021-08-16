@@ -1,32 +1,42 @@
-<script>
-    import {location} from "svelte-spa-router";
+<script lang="ts">
+    import {location, link} from "svelte-spa-router";
+    import active from "svelte-spa-router/active";
 
-    const elements = [
+    export const elements = [
         {label: "DNS", href: "/dashboard/dns"},
         {label: "Containers", href: "/dashboard/containers"},
         {label: "Account", href: "/dashboard/account"}
     ];
+
+    let open = true;
+	let width;
+
+	$: if ($location !== "") {
+		open = false;
+	}
+	
+	$: if (width > 825) {
+		open = false;
+	}
 </script>
 
-<div class="pf-navs">
-    <!-- Left nav -->
-    <nav class="pf-nav">
-        <ul style="justify-content: flex-start">
-            <img style="width: 230px" src="/images/logo.png" alt="Logo">
-        </ul>
-    </nav>
+<svelte:window bind:innerWidth={width}></svelte:window>
 
-    <!-- Right nav -->
-    <nav class="pf-nav">
-        <ul>
-            {#each elements as item}
-                <li class={$location === item.href ? "active" : ""}>
-                    <a href={"#" + item.href}>{item.label}</a>
-                </li>
-            {/each}
-        </ul>
-    </nav>
-</div>
+
+<nav class="pf-nav">
+    <a href="/"><img src="/images/logo.png" alt="Logo" /></a>
+    <ul class:open>
+        {#each elements as item}
+            <li use:active={item.href}>
+                <a href={item.href} use:link >{item.label}</a>
+            </li>
+        {/each}
+    </ul>
+    <span class="nav-expand" class:open></span>
+    <span class="material-icons" on:click={() => open = !open} class:open>
+        {open ? 'close' : 'menu'}
+    </span>
+</nav>
 
 <style global lang="scss" src="./Navbar.scss">
 </style>

@@ -1,0 +1,4 @@
+@import "../../styles/variables";
+
+$nav-background-color: map-get($elevation-colors, "0") !default;
+$nav-color: map-get($accent-colors, "7") !default;
