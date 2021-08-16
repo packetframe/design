@@ -2,12 +2,10 @@
     export let title = "";
 </script>
 
-<main>
-    <fieldset>
-        <legend>{title}</legend>
-        <slot></slot>
-    </fieldset>
-</main>
+<div class="pf-card">
+    <h3 class="pf-card__header">{title}</h3>
+    <slot></slot>
+</div>
 
 <style global lang="scss" src="./Card.scss">
 </style>

@@ -1,11 +1,13 @@
-fieldset {
+@import "../../styles/variables";
+
+.pf-card {
   border: 1px solid white;
   border-radius: 4px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 15px;
+  padding: 20px;
 }
 
-legend {
-  padding: 4px;
+.pf-card__header {
+  font-weight: 600;
+  margin: $spacer;
+  padding-bottom: $spacer * 2;
 }
