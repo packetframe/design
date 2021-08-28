@@ -1,13 +1,18 @@
-@import "../../styles/variables";
+@import "./variables";
 
 .pf-card {
-  border: 1px solid white;
-  border-radius: 4px;
-  padding: 20px;
-}
+  border: $card-border;
+  border-radius: $card-border-radius;
+  padding: $card-padding;
+  padding-top: $card-padding / 2;
+  margin: $card-margin;
+  font-family: $card-body-font-family;
+  color: $card-body-color;
+  width: var(--width, auto);
 
-.pf-card__header {
-  font-weight: 600;
-  margin: $spacer;
-  padding-bottom: $spacer * 2;
+  .pf-card__header {
+    font-weight: 600;
+    padding-bottom: $card-padding / 2;
+    color: $card-header-color;
+  }
 }

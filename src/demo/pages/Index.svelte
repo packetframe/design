@@ -5,6 +5,7 @@
     import Select from "../../components/Select";
     import RecordField from "../../components/RecordField";
     import Navbar from "../../components/Navbar";
+import Card from "../../components/Card";
 
     const items = [
         {value: "chocolate", label: "Chocolate", group: "Sweet"},
@@ -69,12 +70,11 @@
 
     <Select icon="add" {items} on:select={handleSelect}/>
 
-    <Navbar/>
+    <Card title={"Test Card"}>
+      Fugit sint dolores incidunt quas consequatur odit. Nam amet omnis voluptas. Ut ut consequatur et omnis esse nam eum. Numquam odit ut minus aut. Eaque sint excepturi qui labore et a eius.
+      Et et omnis incidunt. Provident excepturi ut quia. Nemo ea quibusdam qui aut omnis aliquam. Doloremque enim quos nesciunt at error. Amet inventore sed quis iste. Corporis consequatur reiciendis quos. 
+    </Card>
 
-    <div style="max-width: 900px; margin: 0 auto;">
-        <RecordField/>
-        <RecordTable {records}/>
-    </div>
 </main>
 
 <style lang="scss">

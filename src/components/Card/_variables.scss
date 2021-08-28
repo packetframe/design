@@ -1,0 +1,28 @@
+@import "../../styles/variables";
+
+// Basic colors
+$card-background-color: map-get($accent-colors, "0") !default;
+
+// Font colors
+$card-header-color: map-get($accent-colors, "7") !default;
+$card-body-color: map-get($accent-colors, "7") !default;
+
+// Border colors and definitions
+$card-border-width: $border-width-root !default;
+$card-border-color: map-get($accent-colors, "7") !default;
+$card-border: $card-border-width solid $card-border-color !default;
+$card-border-radius: $border-radius-root !default;
+
+// Margin and padding
+$card-margin: $spacer !default;
+$card-padding: $spacer * 5 !default;
+
+// Fonts
+$card-header-font-family: $heading-font-family;
+$card-body-font-family: $body-font-family;
+
+// Header styling
+$card-header-font-weight: 600 !default;
+
+
+
