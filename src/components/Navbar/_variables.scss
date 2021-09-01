@@ -2,3 +2,8 @@
 
 $nav-background-color: map-get($elevation-colors, "0") !default;
 $nav-color: map-get($accent-colors, "7") !default;
+
+
+// mobile
+$nav-m-divider-color: map-get($elevation-colors, "4") !default;
+$nav-m-divider-width: 1px !default;

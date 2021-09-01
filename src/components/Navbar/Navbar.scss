@@ -34,8 +34,6 @@
 
   @media (max-width: 825px) {
 		ul {
-			/* display: none;
-			visibility: hidden; */
 			position: fixed;
 			top: -80px;
 			left: 100%;
@@ -56,11 +54,11 @@
 			width: 95% !important;
 			max-width: 300px;
 			height: auto;
-			border-bottom: 2px solid white;
+			border-bottom: $nav-m-divider-width solid $nav-m-divider-color;
 		}
 		ul li a {
 			width: 100%;
-			color: white;
+			color: $nav-color;
 			padding: 1rem !important;
 		}
   }
