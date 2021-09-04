@@ -1,0 +1,82 @@
+@import "./variables";
+
+.pf-snackbar {
+    $snackbar-color-main: white;
+    .success {
+        $snackbar-color-main: green;
+    }
+    .danger {
+        $snackbar-color-main: red;
+    }
+    .info {
+        $snackbar-color-main: grey;
+    }
+
+    background-color: white;
+    border: $snackbar-border-width solid $snackbar-color-main;
+    margin: $snackbar-margin;
+
+    .pf-snackbar__wrapper {
+        color: $snackbar-color;
+        background-color: $snackbar-color-main;
+        opacity: 0.8;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        justify-content: space-between;
+    }
+
+    
+
+}
+
+
+main {
+    background: white;
+    border: 2px solid var(--mainColor);
+    margin: 1px 0px;
+}
+main.ungrouped div.wrapper {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translatex(-50%);
+}
+main div.wrapper {
+    color: white;
+    background: var(--mainColor);
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    justify-content: space-between;
+}
+div.message, div.status {
+    display: flex;
+    align-items: center;
+    margin: 4px;
+    padding: 0px;
+    padding-bottom: 2px;
+}
+div.status {
+    background: rgba(0, 0, 0, 0.4) !important;
+    padding: 1px 4px 2px 4px;
+    border-radius: 2px;
+    margin-left: 7px;
+}
+span {
+    font-size: 16px;
+    margin: 6px 7px 6px 5px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    /* border-radius: 25px; */
+    /* border: 2px solid var(--mainColor); */
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span:hover {
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
