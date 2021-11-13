@@ -7,6 +7,7 @@
     import DNS from "./demo/pages/dashboard/DNS.svelte";
     import Containers from "./demo/pages/dashboard/Containers.svelte";
     import Account from "./demo/pages/dashboard/Account.svelte";
+  import Loading from "./demo/pages/dashboard/Loading.svelte";
 
     $: {
         if ($location === "/dashboard") {
@@ -18,7 +19,8 @@
         "/": Index,
         "/dashboard/dns": DNS,
         "/dashboard/containers": Containers,
-        "/dashboard/account": Account
+        "/dashboard/account": Account,
+        "/dashboard/loading": Loading,
     };
 </script>
 

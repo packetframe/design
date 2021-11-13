@@ -1,0 +1,5 @@
+@import "../../styles/variables";
+
+$spinner-color: map-get($elevation-colors, "0") !default;
+$spinner-animation-length: 5s !default;
+$spinner-margin: 0 auto !default;

@@ -5,7 +5,8 @@
     export const elements = [
         {label: "DNS", href: "/dashboard/dns"},
         {label: "Containers", href: "/dashboard/containers"},
-        {label: "Account", href: "/dashboard/account"}
+        {label: "Account", href: "/dashboard/account"},
+        {label: "Loading", href: "/dashboard/loading"},
     ];
 
     let open = true;

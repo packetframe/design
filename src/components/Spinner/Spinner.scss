@@ -1,0 +1,42 @@
+@import "./variables";
+
+.pf-spinner {
+    background-color: transparent;
+    margin: $spinner-margin;
+
+    // default flex things
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+
+    // important w/h
+    width: 81px;
+    height: 53px;
+
+    .pf-spinner__line {
+        width: 100%;
+        height: 10%;
+        background-color: $spinner-color;
+        animation: slide $spinner-animation-length infinite;
+        animation-delay: var(--delay);
+        margin-left: -100%;
+        z-index: 10;
+        margin-bottom: 5%;
+    }
+
+    .pf-spinner__img {
+        position: absolute;
+        z-index: 0;
+    }   
+}
+
+@keyframes slide {
+    0%  {margin-left: -100%;}
+    10% {margin-left: -100%;}
+    25% {margin-left: 0%}
+    75% {margin-left: 0%}
+    90% {margin-left: 105%;}
+    100% {margin-left: 105%;}
+}
